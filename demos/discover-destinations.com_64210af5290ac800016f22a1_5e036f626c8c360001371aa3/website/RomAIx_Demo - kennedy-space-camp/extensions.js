@@ -1,8 +1,8 @@
-export const DiscoverDestinationsLeadForm1 = {
-  name: 'DiscoverDestinationsLeadForm1',
+export const DiscoverDestinationsLeadForm = {
+  name: 'DiscoverDestinationsLeadForm',
   type: 'response',
   match: ({ trace }) =>
-    trace.type === 'ext_discoverLeadForm1' || trace.payload?.name === 'ext_discoverLeadForm1',
+    trace.type === 'ext_discoverLeadForm' || trace.payload?.name === 'ext_discoverLeadForm',
   render: ({ trace, element }) => {
     // --- Configuration from Voiceflow Payload ---
     const {

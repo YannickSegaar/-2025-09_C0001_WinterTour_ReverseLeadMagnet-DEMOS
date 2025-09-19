@@ -663,7 +663,7 @@ var et_pb_sticky_elements = [];
   console.log("Script loaded. Initializing Voiceflow chat widget...");
 
   // Import your extension as an ES module (same folder as this HTML file)
-  import { DiscoverDestinationsLeadForm1 } from './extensions.js';
+  import { DiscoverDestinationsLeadForm } from './extensions.js';
 
   (function (d, t) {
     const v = d.createElement(t);
@@ -682,7 +682,7 @@ var et_pb_sticky_elements = [];
         allowDangerousHTML: true,
         assistant: {
           // pass the imported extension here
-          extensions: [DiscoverDestinationsLeadForm1],
+          extensions: [DiscoverDestinationsLeadForm],
         },
       };
 
