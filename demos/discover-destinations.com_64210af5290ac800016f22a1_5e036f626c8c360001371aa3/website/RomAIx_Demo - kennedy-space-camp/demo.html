@@ -657,91 +657,55 @@ var et_pb_sticky_elements = [];
     <!-- Voiceflow Chat Widget Container -->
     <div id="flat-chat"></div>
     <div id="voiceflow-chat-frame"></div>
+	
+	<!-- Voiceflow Chat Widget and Extensions Script -->
+<script type="module">
+  console.log("Script loaded. Initializing Voiceflow chat widget...");
 
-    <!-- Voiceflow Chat Widget and Extensions Script -->
-    <script type="module">
-        console.log("Script loaded. Initializing Voiceflow chat widget...");
+  // Import your extension as an ES module (same folder as this HTML file)
+  import { DiscoverDestinationsLeadForm } from './extensions.js';
 
-        // Import extensions from the extensions.js file
-        import {
-            DiscoverDestinationsLeadForm
-        } from './extensions.js';
+  (function (d, t) {
+    const v = d.createElement(t);
+    const s = d.getElementsByTagName(t)[0];
 
-        // Load the Voiceflow chat widget with extensions
-        (function (d, t) {
-            var v = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-            v.onload = function () {
-                console.log("Voiceflow widget script loaded. Initializing chat...");
+    v.onload = async function () {
+      console.log("Voiceflow widget script loaded. Initializing chat...");
 
-                window.voiceflow.chat.load({
-                    verify: { projectID: '68cac9b5ec4cdbd2280e073d' },
-                    url: 'https://general-runtime.voiceflow.com',
-                    versionID: 'production',
-                    voice: { 
-                        url: "https://runtime-api.voiceflow.com" 
-                    },
-                    user: {
-                        name: 'Demo User',
-                    },
-                    render: {
-                        mode: 'overlay',
-                    },
-                    autostart: false, // Changed to false to control opening manually
-                    allowDangerousHTML: true,
-                    assistant: {
-                        extensions: [
-                                DiscoverDestinationsLeadForm
-							],
-                    },
-                }).then(() => {
-                    console.log("Voiceflow chat initialized successfully.");
-                    
-                    // Setup proactive message sequence
-                    setupProactiveSequence();
-                    
-                    // Initialize the handoff listener with the Voiceflow runtime
-                    if (typeof setupHandoffListener === 'function') {
-                        setupHandoffListener(window.voiceflow.chat.runtime);
-                    }
-                }).catch((error) => {
-                    console.error("Error initializing Voiceflow chat:", error);
-                });
-            };
-            v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
-            v.type = 'text/javascript';
-            s.parentNode.insertBefore(v, s);
-        })(document, 'script');
+      const config = {
+        verify: { projectID: '68cac9b5ec4cdbd2280e073d' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        user: { name: 'Demo User' },
+        render: { mode: 'overlay' },
+        autostart: false,
+        allowDangerousHTML: true,
+        assistant: {
+          // pass the imported extension here
+          extensions: [DiscoverDestinationsLeadForm],
+        },
+      };
 
-        // Function to setup the proactive message sequence
-        function setupProactiveSequence() {
-            // Clear any existing proactive messages
-            window.voiceflow.chat.proactive.clear();
-            
-            // First proactive message after 1000ms
-            setTimeout(() => {
-                console.log("Sending first proactive message");
-                window.voiceflow.chat.proactive.push({
-                    type: 'text',
-                    payload: { message: 'Hi there!' }
-                });
-            }, 1000);
+      try {
+        await window.voiceflow.chat.load(config);
+        console.log("Voiceflow chat initialized successfully.");
 
-            // Second proactive message after 2000ms total
-            setTimeout(() => {
-                console.log("Sending second proactive message");
-                window.voiceflow.chat.proactive.push({
-                    type: 'text',
-                    payload: { message: 'Looking for the perfect tour?' }
-                });
-            }, 2000);
+        // proactive messages
+        window.voiceflow.chat.proactive.clear();
+        setTimeout(() => window.voiceflow.chat.proactive.push({ type: 'text', payload: { message: 'Hi there!' } }), 1000);
+        setTimeout(() => window.voiceflow.chat.proactive.push({ type: 'text', payload: { message: 'Looking for the perfect tour?' } }), 2000);
+        setTimeout(() => window.voiceflow.chat.open(), 3000);
+      } catch (error) {
+        console.error("Error initializing Voiceflow chat:", error);
+      }
+    };
 
-            // Open chat widget after 3000ms total
-            setTimeout(() => {
-                console.log("Opening chat widget");
-                window.voiceflow.chat.open();
-            }, 3000);
-        }
-    </script>
+    v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+    v.type = 'text/javascript';
+    s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+
 </body>
 </html>

@@ -1,0 +1,291 @@
+{
+  "name": "RomAIx - discover-destinations.com_64210af5290ac800016f22a1_5e036f626c8c360001371aa3",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fe5af68f-3743-4885-9987-acddc6bc1235",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -368,
+        -512
+      ],
+      "id": "ab3d718e-518c-4760-84b8-eb6588cefd79",
+      "name": "Webhook",
+      "webhookId": "fe5af68f-3743-4885-9987-acddc6bc1235"
+    },
+    {
+      "parameters": {
+        "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Your Dream Trip Awaits!</title>\n    <style>\n        /* Basic Reset */\n        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }\n        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }\n        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }\n        table { border-collapse: collapse !important; }\n        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }\n    </style>\n</head>\n<body style=\"margin: 0 !important; padding: 0 !important; background-color: #F8F9FA;\">\n    <!-- Main Table -->\n    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n        <tr>\n            <td align=\"center\" style=\"background-color: #F8F9FA;\">\n                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width: 600px;\">\n                    <!-- Header -->\n                    <tr>\n                        <td align=\"center\" valign=\"top\" style=\"padding: 40px 10px 40px 10px; background: linear-gradient(135deg, #ED4341 0%, #FF6B69 100%);\">\n                            <a href=\"#\" target=\"_blank\">\n                                <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/DiscoverDestinations_Voiceflow_Avatar.png\" alt=\"Discover Destinations Logo\" width=\"200\" style=\"display: block; width: 200px; max-width: 200px; min-width: 200px; font-family: 'Inter', sans-serif; color: #ffffff; font-size: 18px;\" border=\"0\">\n                            </a>\n                        </td>\n                    </tr>\n                    <!-- Main Content -->\n                    <tr>\n                        <td align=\"center\" style=\"padding: 40px 30px 40px 30px; background-color: #ffffff;\">\n                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n                                <!-- Heading -->\n                                <tr>\n                                    <td align=\"center\" style=\"font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; color: #2C3E50;\">\n                                        Your Adventure Awaits, {{ $('Webhook').item.json.body.lead.firstName }}!\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td align=\"center\" style=\"padding: 20px 0 0 0;\">\n                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 16px; color: #64748B; line-height: 1.6; margin: 0;\">\n                                            Thank you for requesting your personalized travel itinerary! We're excited to help you discover your dream destination.\n                                        </p>\n                                    </td>\n                                </tr>\n                                <!-- Confirmation Details -->\n                                <tr>\n                                    <td align=\"center\" style=\"padding: 30px 0;\">\n                                        <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"background: #fde8e8; border-radius: 12px; padding: 20px;\">\n                                            <tr>\n                                                <td align=\"center\">\n                                                    <h3 style=\"font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 600; color: #ED4341; margin: 0 0 15px 0;\">\n                                                        What Happens Next?\n                                                    </h3>\n                                                    <p style=\"font-family: 'Inter', sans-serif; font-size: 14px; color: #2C3E50; line-height: 1.6; margin: 0;\">\n                                                        Our travel experts are already working on your personalized itinerary for <strong>{{ $('Webhook').item.json.body.lead.destination }}</strong>. We'll contact you within 24 hours at <strong>{{ $('Webhook').item.json.body.lead.email }}</strong> or <strong>{{ $('Webhook').item.json.body.lead.phone }}</strong> with amazing options tailored just for you!\n                                                    </p>\n                                                </td>\n                                            </tr>\n                                        </table>\n                                    </td>\n                                </tr>\n                                <!-- Your Details -->\n                                <tr>\n                                    <td align=\"left\" style=\"padding: 0 0 20px 0;\">\n                                        <h4 style=\"font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; color: #2C3E50; margin: 0 0 10px 0;\">\n                                            Your Request Details:\n                                        </h4>\n                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 14px; color: #64748B; line-height: 1.6; margin: 0;\">\n                                            <strong>Name:</strong> {{ $('Webhook').item.json.body.lead.firstName }} {{ $('Webhook').item.json.body.lead.lastName }}<br>\n                                            <strong>Destination:</strong> {{ $('Webhook').item.json.body.lead.destination }}<br>\n                                            <strong>Submitted:</strong> September 16th 2025\n                                        </p>\n                                    </td>\n                                </tr>\n                                <!-- Conversation Summary -->\n                                <tr>\n                                    <td align=\"left\" style=\"padding: 0 0 30px 0; border-bottom: 1px solid #E5E8EB;\">\n                                        <h4 style=\"font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; color: #2C3E50; margin: 0 0 15px 0;\">\n                                            Your Travel Inquiry Summary:\n                                        </h4>\n                                        <div style=\"background: #F8F9FA; border-left: 4px solid #ED4341; border-radius: 8px; padding: 20px;\">\n                                            <div style=\"font-family: 'Inter', sans-serif; font-size: 14px; color: #2C3E50; line-height: 1.7;\">\n                                                <!-- AI-generated conversation summary will be inserted here -->\n                                                {{ $json.output }}\n                                            </div>\n                                        </div>\n                                    </td>\n                                </tr>\n                                <!-- Explore Our Destinations Section -->\n                                <tr>\n                                    <td align=\"center\" style=\"padding: 40px 0 20px 0;\">\n                                        <h3 style=\"font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; color: #2C3E50; margin: 0 0 10px 0;\">\n                                            Explore Our Amazing Destinations\n                                        </h3>\n                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 16px; color: #64748B; line-height: 1.6; margin: 0 0 30px 0;\">\n                                           Discover breathtaking adventures around the world\n                                        </p>\n                                    </td>\n                                </tr>\n                                <!-- Destinations Grid -->\n                                <tr>\n                                    <td style=\"padding: 0 0 30px 0;\">\n                                        <!-- Row 1: Canada, USA, Latin America -->\n                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n                                            <tr>\n                                                <td width=\"33.33%\" align=\"center\" style=\"padding: 5px;\">\n                                                    <a href=\"#\" target=\"_blank\" style=\"text-decoration: none;\">\n                                                        <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/Canada.png\" alt=\"Canada\" width=\"160\" height=\"160\" style=\"display: block; width: 160px; height: 160px; border-radius: 12px; object-fit: cover; margin: 0 auto 8px auto; transition: transform 0.2s ease;\">\n                                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #2C3E50; margin: 0; text-align: center;\">Canada</p>\n                                                    </a>\n                                                </td>\n                                                <td width=\"33.33%\" align=\"center\" style=\"padding: 5px;\">\n                                                    <a href=\"#\" target=\"_blank\" style=\"text-decoration: none;\">\n                                                        <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/USA.png\" alt=\"USA\" width=\"160\" height=\"160\" style=\"display: block; width: 160px; height: 160px; border-radius: 12px; object-fit: cover; margin: 0 auto 8px auto; transition: transform 0.2s ease;\">\n                                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #2C3E50; margin: 0; text-align: center;\">USA</p>\n                                                    </a>\n                                                </td>\n                                                <td width=\"33.33%\" align=\"center\" style=\"padding: 5px;\">\n                                                    <a href=\"#\" target=\"_blank\" style=\"text-decoration: none;\">\n                                                        <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/LatinAmerica.png\" alt=\"Latin America\" width=\"160\" height=\"160\" style=\"display: block; width: 160px; height: 160px; border-radius: 12px; object-fit: cover; margin: 0 auto 8px auto; transition: transform 0.2s ease;\">\n                                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #2C3E50; margin: 0; text-align: center;\">Latin America</p>\n                                                    </a>\n                                                </td>\n                                            </tr>\n                                        </table>\n                                        <!-- Row 2: Caribbean, Europe, Middle East -->\n                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"margin-top: 15px;\">\n                                            <tr>\n                                                <td width=\"33.33%\" align=\"center\" style=\"padding: 5px;\">\n                                                    <a href=\"#\" target=\"_blank\" style=\"text-decoration: none;\">\n                                                        <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/Caribbean.png\" alt=\"Caribbean\" width=\"160\" height=\"160\" style=\"display: block; width: 160px; height: 160px; border-radius: 12px; object-fit: cover; margin: 0 auto 8px auto; transition: transform 0.2s ease;\">\n                                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #2C3E50; margin: 0; text-align: center;\">Caribbean</p>\n                                                    </a>\n                                                </td>\n                                                <td width=\"33.33%\" align=\"center\" style=\"padding: 5px;\">\n                                                    <a href=\"#\" target=\"_blank\" style=\"text-decoration: none;\">\n                                                        <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/Europe.png\" alt=\"Europe\" width=\"160\" height=\"160\" style=\"display: block; width: 160px; height: 160px; border-radius: 12px; object-fit: cover; margin: 0 auto 8px auto; transition: transform 0.2s ease;\">\n                                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #2C3E50; margin: 0; text-align: center;\">Europe</p>\n                                                    </a>\n                                                </td>\n                                                <td width=\"33.33%\" align=\"center\" style=\"padding: 5px;\">\n                                                    <a href=\"#\" target=\"_blank\" style=\"text-decoration: none;\">\n                                                        <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/MiddleEast.png\" alt=\"Middle East\" width=\"160\" height=\"160\" style=\"display: block; width: 160px; height: 160px; border-radius: 12px; object-fit: cover; margin: 0 auto 8px auto; transition: transform 0.2s ease;\">\n                                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #2C3E50; margin: 0; text-align: center;\">Middle East</p>\n                                                    </a>\n                                                </td>\n                                            </tr>\n                                        </table>\n                                        <!-- Row 3: Asia, Australia & NZ, Africa -->\n                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"margin-top: 15px;\">\n                                            <tr>\n                                                <td width=\"33.33%\" align=\"center\" style=\"padding: 5px;\">\n                                                    <a href=\"#\" target=\"_blank\" style=\"text-decoration: none;\">\n                                                        <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/Asia.png\" alt=\"Asia\" width=\"160\" height=\"160\" style=\"display: block; width: 160px; height: 160px; border-radius: 12px; object-fit: cover; margin: 0 auto 8px auto; transition: transform 0.2s ease;\">\n                                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #2C3E50; margin: 0; text-align: center;\">Asia</p>\n                                                    </a>\n                                                </td>\n                                                <td width=\"33.33%\" align=\"center\" style=\"padding: 5px;\">\n                                                    <a href=\"#\" target=\"_blank\" style=\"text-decoration: none;\">\n                                                        <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/Australia_NZ.png\" alt=\"Australia & NZ\" width=\"160\" height=\"160\" style=\"display: block; width: 160px; height: 160px; border-radius: 12px; object-fit: cover; margin: 0 auto 8px auto; transition: transform 0.2s ease;\">\n                                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #2C3E50; margin: 0; text-align: center;\">Australia & NZ</p>\n                                                    </a>\n                                                </td>\n                                                <td width=\"33.33%\" align=\"center\" style=\"padding: 5px;\">\n                                                    <a href=\"#\" target=\"_blank\" style=\"text-decoration: none;\">\n                                                        <img src=\"https://yannicksegaar.github.io/2025-09_C0001_WinterTour_ReverseLeadMagnet_DEMOS/Africa.png\" alt=\"Africa\" width=\"160\" height=\"160\" style=\"display: block; width: 160px; height: 160px; border-radius: 12px; object-fit: cover; margin: 0 auto 8px auto; transition: transform 0.2s ease;\">\n                                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #2C3E50; margin: 0; text-align: center;\">Africa</p>\n                                                    </a>\n                                                </td>\n                                            </tr>\n                                        </table>\n                                    </td>\n                                </tr>\n                                <!-- CTA Section -->\n                                <tr>\n                                    <td align=\"center\" style=\"padding: 20px 0;\">\n                                        <a href=\"#\" target=\"_blank\" style=\"display: inline-block; padding: 16px 32px; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: #ffffff; text-decoration: none; background: linear-gradient(135deg, #ED4341 0%, #FF6B69 100%); border-radius: 12px; text-transform: uppercase; letter-spacing: 0.8px;\">\n                                            Browse All Destinations\n                                        </a>\n                                    </td>\n                                </tr>\n                                <!-- Contact Info -->\n                                <tr>\n                                    <td align=\"center\" style=\"padding: 30px 0 0 0;\">\n                                        <p style=\"font-family: 'Inter', sans-serif; font-size: 13px; color: #94A3B8; line-height: 1.6; margin: 0;\">\n                                            Questions? Reply to this email or call us at <a href=\"tel:+1234567890\" style=\"color: #ED4341; text-decoration: none;\">+1 (234) 567-8900</a>\n                                        </p>\n                                    </td>\n                                </tr>\n                            </table>\n                        </td>\n                    </tr>\n                    <!-- Footer -->\n                    <tr>\n                        <td align=\"center\" style=\"padding: 20px 30px; background-color: #F8F9FA;\">\n                            <p style=\"margin: 0; font-family: 'Inter', sans-serif; font-size: 12px; color: #94A3B8;\">\n                                Discover Destinations | Your Dream Trip Starts Here<br>\n                                <a href=\"#\" target=\"_blank\" style=\"color: #94A3B8;\">Unsubscribe</a> | <a href=\"#\" target=\"_blank\" style=\"color: #94A3B8;\">Privacy Policy</a>\n                            </p>\n                        </td>\n                    </tr>\n                </table>\n            </td>\n        </tr>\n    </table>\n</body>\n</html>"
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        208,
+        -704
+      ],
+      "id": "b40885e8-577e-4df0-a367-9df6d1d3a92a",
+      "name": "Inquiry Acknowledgement Template"
+    },
+    {
+      "parameters": {
+        "html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>New Travel Inquiry Lead!</title>\n    <style>\n        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }\n        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }\n        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }\n        table { border-collapse: collapse !important; }\n        body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; font-family: Inter, Arial, sans-serif; }\n    </style>\n</head>\n<body style=\"margin: 0 !important; padding: 20px !important; background-color: #f8f9fa;\">\n    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 16px; border: 1px solid #E5E8EB; box-shadow: 0 4px 12px rgba(237, 67, 65, 0.15);\">\n        <!-- Header -->\n        <tr>\n            <td align=\"center\" style=\"padding: 20px; background: linear-gradient(135deg, #ED4341 0%, #FF6B69 100%); border-radius: 16px 16px 0 0;\">\n                <h1 style=\"color: #ffffff; margin: 0; font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.3px;\">New Travel Inquiry Lead! ✈️</h1>\n            </td>\n        </tr>\n        <!-- Priority Banner -->\n        <tr>\n            <td style=\"padding: 0;\">\n                <div style=\"background: #fde8e8; padding: 12px 20px; border-left: 4px solid #ED4341;\">\n                    <p style=\"margin: 0; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #ED4341;\">\n                        🎯 NEW LEAD - Respond within 24 hours for best conversion!\n                    </p>\n                </div>\n            </td>\n        </tr>\n        <!-- Lead Contact Info -->\n        <tr>\n            <td style=\"padding: 25px 20px 15px 20px;\">\n                <h2 style=\"font-family: 'Inter', sans-serif; color: #2C3E50; border-bottom: 2px solid #ED4341; padding-bottom: 8px; margin: 0 0 20px 0; font-size: 20px; font-weight: 700;\">Contact Information</h2>\n                <table width=\"100%\" cellpadding=\"8\" cellspacing=\"0\" style=\"background: #F8F9FA; border-radius: 12px; padding: 15px;\">\n                    <tr>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: #2C3E50; width: 120px;\">Name:</td>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px; color: #64748B;\">{{ $('Webhook').item.json.body.lead.firstName }} {{ $('Webhook').item.json.body.lead.lastName }}</td>\n                    </tr>\n                    <tr>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: #2C3E50;\">Email:</td>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px;\">\n                            <a href=\"mailto:{{ $json.body.lead.email }}\" style=\"color: #ED4341; text-decoration: none; font-weight: 600;\">{{ $('Webhook').item.json.body.lead.email }}</a>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: #2C3E50;\">Phone:</td>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px;\">\n                            <a href=\"tel:{{ $json.body.lead.phone }}\" style=\"color: #ED4341; text-decoration: none; font-weight: 600;\">{{ $('Webhook').item.json.body.lead.phone }}</a>\n                        </td>\n                    </tr>\n                </table>\n            </td>\n        </tr>\n        <!-- Travel Preferences -->\n        <tr>\n            <td style=\"padding: 15px 20px; border-top: 1px solid #E5E8EB;\">\n                <h2 style=\"font-family: 'Inter', sans-serif; color: #2C3E50; border-bottom: 2px solid #ED4341; padding-bottom: 8px; margin: 0 0 20px 0; font-size: 20px; font-weight: 700;\">Travel Preferences</h2>\n                <table width=\"100%\" cellpadding=\"8\" cellspacing=\"0\" style=\"background: #F8F9FA; border-radius: 12px; padding: 15px;\">\n                    <tr>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: #2C3E50; width: 140px;\">Destination:</td>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: #ED4341; text-transform: uppercase; letter-spacing: 0.5px;\">{{ $('Webhook').item.json.body.lead.destination }}</td>\n                    </tr>\n                    <tr>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: #2C3E50;\">Submitted:</td>\n                        <td style=\"font-family: 'Inter', sans-serif; font-size: 15px; color: #64748B;\">September 16th 2025</td>\n                    </tr>\n                </table>\n            </td>\n        </tr>\n        <!-- Customer Message (if provided) -->\n        <tr>\n            <td style=\"padding: 15px 20px; border-top: 1px solid #E5E8EB;\">\n                <h3 style=\"font-family: 'Inter', sans-serif; color: #2C3E50; margin: 0 0 15px 0; font-size: 16px; font-weight: 600;\">Conversation History:</h3>\n                <div style=\"background: #fde8e8; border-left: 4px solid #ED4341; padding: 15px; border-radius: 8px;\">\n                    <p style=\"margin: 0; font-family: 'Inter', sans-serif; font-size: 15px; color: #2C3E50; line-height: 1.6; font-style: italic;\">\n                        \"{{ $json.output || 'No additional message provided.' }}\"\n                    </p>\n                </div>\n            </td>\n        </tr>\n        <!-- Next Steps -->\n        <tr>\n            <td style=\"padding: 20px; border-top: 1px solid #E5E8EB;\">\n                <h3 style=\"font-family: 'Inter', sans-serif; color: #2C3E50; margin: 0 0 15px 0; font-size: 16px; font-weight: 600;\">Recommended Next Steps:</h3>\n                <ul style=\"font-family: 'Inter', sans-serif; font-size: 14px; color: #64748B; line-height: 1.6; margin: 0; padding-left: 20px;\">\n                    <li>Contact lead within 24 hours for best conversion rates</li>\n                    <li>Prepare personalized itinerary options for {{ $('Webhook').item.json.body.lead.destination }}</li>\n                    <li>Ask about travel dates, group size, and budget preferences</li>\n                    <li>Share similar destination success stories and testimonials</li>\n                </ul>\n            </td>\n        </tr>\n         <!-- Action Buttons -->\n        <tr>\n            <td align=\"center\" style=\"padding: 25px 20px;\">\n                <table cellpadding=\"0\" cellspacing=\"0\">\n                    <tr>\n                        <td style=\"padding-right: 10px;\">\n                            <a href=\"mailto:{{ $json.body.lead.email }}\" target=\"_blank\" style=\"display: inline-block; padding: 14px 24px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #ffffff; text-decoration: none; background: linear-gradient(135deg, #ED4341 0%, #FF6B69 100%); border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px;\">\n                                Email Lead Now\n                            </a>\n                        </td>\n                        <td>\n                            <a href=\"tel:{{ $json.body.lead.phone }}\" target=\"_blank\" style=\"display: inline-block; padding: 14px 24px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: #ED4341; text-decoration: none; background: #ffffff; border: 2px solid #ED4341; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.5px;\">\n                                Call Lead\n                            </a>\n                        </td>\n                    </tr>\n                </table>\n            </td>\n        </tr>\n        <!-- Footer -->\n        <tr>\n            <td align=\"center\" style=\"padding: 15px 20px; background-color: #F8F9FA; border-radius: 0 0 16px 16px;\">\n                <p style=\"margin: 0; font-family: 'Inter', sans-serif; font-size: 12px; color: #94A3B8;\">\n                    Discover Destinations CRM | Lead generated via chatbot integration\n                </p>\n            </td>\n        </tr>\n    </table>\n</body>\n</html>"
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        208,
+        -304
+      ],
+      "id": "32760bea-1116-461c-8eca-ada394758d9b",
+      "name": "Lead Captured"
+    },
+    {
+      "parameters": {
+        "sendTo": "info@romaix.ai",
+        "subject": "Customer Acknowledgement",
+        "message": "={{$json.html}}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        432,
+        -704
+      ],
+      "id": "d1a960d2-d9c9-473a-9b21-2286a9070cd6",
+      "name": "Send a message1",
+      "webhookId": "b9a5bc1c-62ba-491c-ac9b-2d0fd990d12c",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "jGi6LF3PNOFMql6n",
+          "name": "Gmail - RomAIx N8N"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "info@romaix.ai",
+        "subject": "Lead Captured!",
+        "message": "={{ $json.html }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        432,
+        -304
+      ],
+      "id": "70292b36-2207-4d62-ae33-0d4f9e6cc499",
+      "name": "Send a message2",
+      "webhookId": "b7de8c2c-b115-444d-8934-3e49a7f3a761",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "jGi6LF3PNOFMql6n",
+          "name": "Gmail - RomAIx N8N"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -80,
+        -592
+      ],
+      "id": "40d5cbcc-dbc2-476f-a463-96c967a68462",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "4IeSmp8hjzRSkbQN",
+          "name": "N8N RomAIx XYZ Self-Hosted"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Here is the conversation history to summarize:\n\n {{ $json.body.conversationData.history }}",
+        "options": {
+          "systemMessage": "You are a customer service assistant creating brief, friendly summaries of travel inquiries for customers.\n\n**INPUT:** You will receive a conversation history between a travel assistant and a customer.\n\n**OUTPUT REQUIREMENTS:**\n- Format in clean HTML for email templates\n- Use simple HTML tags: <p>, <strong>\n- Focus ONLY on what the customer asked for or expressed interest in\n- Do NOT include assistant responses, recommendations, or company information\n- Keep it very concise and customer-focused\n- Ignore any complaints, negative feedback, or problematic content\n- If the conversation contains no clear customer requests, output: <p>Thank you for your interest in our travel services.</p>\n\n**STRUCTURE YOUR RESPONSE AS:**\n\n<p>Thank you for your inquiry! Here's a quick summary of what you're looking for:</p>\n\n<p><strong>Your Travel Interests:</strong><br>\n[Brief, bullet-style list of what the customer asked about, showed interest in, or requested - destinations, activities, trip types, etc.]</p>\n\n<p>We'll be in touch shortly with personalized recommendations!</p>\n\n**EXAMPLE FORMAT:**\n<p>Thank you for your inquiry! Here's a quick summary of what you're looking for:</p>\n<p><strong>Your Travel Interests:</strong><br>\n- Custom itinerary for Canada<br>\n- Interest in exploring Canadian destinations</p>\n<p>We'll be in touch shortly with personalized recommendations!</p>\n\n**IMPORTANT GUIDELINES:**\n- Only mention customer requests, never assistant suggestions\n- Skip any negative comments or complaints\n- Keep it under 100 words total\n- Maintain a positive, professional tone\n- If multiple destinations mentioned, list them briefly\n- Focus on travel intent, not conversation details"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -144,
+        -816
+      ],
+      "id": "437713d1-3927-4486-a971-2543d8cce928",
+      "name": "Inquiry Acknowledgement Summarizer"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Here is the conversation history to summarize:\n\n {{ $json.body.conversationData.history }}",
+        "options": {
+          "systemMessage": "You are a travel industry analyst tasked with creating comprehensive conversation summaries for tour operators. Your job is to analyze customer-agent conversations and produce detailed, actionable insights.\n\n**INPUT:** You will receive a conversation history showing exchanges between an AI travel assistant and a potential customer.\n\n**OUTPUT REQUIREMENTS:**\n- Format your response in clean HTML suitable for email templates\n- Use proper HTML tags: <h3>, <p>, <strong>, <em>, <ul>, <li>\n- Create a professional, detailed summary for tour operators\n- Include customer interests, preferences, and engagement level\n- Note any specific destinations, activities, or requirements mentioned\n- Highlight sales opportunities and next steps\n\n**STRUCTURE YOUR RESPONSE AS:**\n\n<h3>Conversation Summary</h3>\n<p><strong>Customer Interest Level:</strong> [High/Medium/Low with reasoning]</p>\n<p><strong>Primary Destination:</strong> [Destination mentioned]</p>\n<p><strong>Travel Preferences:</strong> [Any specific interests, activities, or requirements]</p>\n\n<h3>Conversation Flow</h3>\n<ul>\n<li>[Key point 1 from conversation]</li>\n<li>[Key point 2 from conversation]</li>\n<li>[Additional relevant points]</li>\n</ul>\n\n<h3>Sales Opportunity Assessment</h3>\n<p>[Analysis of customer readiness to book, specific interests that can be leveraged, and recommended follow-up approach]</p>\n\n<h3>Recommended Next Steps</h3>\n<p>[Specific recommendations for the tour operator on how to follow up with this lead]</p>\n\n**IMPORTANT GUIDELINES:**\n- Focus on actionable business intelligence\n- Include both customer questions AND assistant responses when relevant\n- Identify any pain points or objections\n- Note the customer's journey stage (browsing, researching, ready to book)\n- Maintain a professional, analytical tone"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -144,
+        -304
+      ],
+      "id": "52e9a662-f8d3-457d-a5e7-377bcc2e5bb8",
+      "name": "Lead Capture Summarizer"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -80,
+        -80
+      ],
+      "id": "3af8b465-4e75-45ef-976a-b1f5f2f4b632",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "4IeSmp8hjzRSkbQN",
+          "name": "N8N RomAIx XYZ Self-Hosted"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# **discover-destinations.com_64210af5290ac800016f22a1_5e036f626c8c360001371aa3**\n\n# **CHATBOT LEAD → DUAL EMAIL TEMPLATES w/ AI SUMMARIES (18 September 2025)**\n\n## **Description**\n\nThis workflow receives new travel-lead payloads from your chatbot via a Webhook, generates **two different HTML summaries** of the conversation (customer-friendly + operator-focused) using OpenAI, renders **two branded email templates**, and sends them via Gmail:\n\n- **Customer Acknowledgement** (thank-you + brief summary)\n\n- **Internal Lead Alert** (structured analysis + next steps)\n\nIt cleanly separates **data capture**, **AI summarization**, **template rendering**, and **email delivery** so each piece can be improved independently.\n\n***\n\n\n## **How it works**\n\n1. **Trigger**\n\n   - **Webhook** (`POST /fe5af68f-3743-4885-9987-acddc6bc1235`) receives JSON from the chatbot.\n\n   - **Expected payload (subset):**\n\n     - `body.lead.firstName`, `lastName`, `email`, `phone`, `destination`\n\n     - `body.conversationData.history` (full transcript string)\n\n2. **AI Summaries (two tracks)**\n\n   - **Inquiry Acknowledgement Summarizer**\n\n     - Model: **gpt-4.1-mini** (via **OpenAI Chat Model**)\n\n     - Prompt: Creates a **concise, customer-friendly** HTML snippet focused ONLY on the customer’s stated interests.\n\n     - Output placed at `{{$json.output}}`.\n\n   - **Lead Capture Summarizer**\n\n     - Model: **gpt-4.1-mini** (via **OpenAI Chat Model1**)\n\n     - Prompt: Produces a **detailed operator summary** (interest level, preferences, sales angle, next steps) in structured HTML.\n\n     - Output placed at `{{$json.output}}`.\n\n3. **Template Rendering**\n\n   - **Inquiry Acknowledgement Template** (HTML node)\n\n     - Renders the branded **customer email**.\n\n     - Injects lead fields using **expressions referencing the Webhook item**:\n\n       - `{{ $('Webhook').item.json.body.lead.firstName }}`, etc.\n\n     - Injects AI summary with `{{ $json.output }}`.\n\n   - **Lead Captured** (HTML node)\n\n     - Renders the **internal lead alert** with contact details, destination, submitted date line, conversation summary block (uses `{{ $json.output }}`), and recommended next steps.\n\n4. **Email Delivery**\n\n   - **Send a message1** (Gmail) → Subject: **“Customer Acknowledgement”**\n\n     - `message = {{$json.html}}` (HTML from the previous node)\n\n     - Sends to **[info@romaix.ai]()** (currently same as internal—adjust as needed).\n\n   - **Send a message2** (Gmail) → Subject: **“Lead Captured!”**\n\n     - `message = {{$json.html}}` (HTML from the previous node)\n\n     - Sends to **[info@romaix.ai]()**.\n\n***\n\n\n## **Purpose**\n\nDeliver immediate, on-brand communication to the customer while simultaneously notifying your team with actionable context. The dual-track summaries ensure **customer emails stay succinct and positive**, and **internal alerts remain analytical and sales-oriented**.\n\n**Key Benefits**\n\n- Instant customer acknowledgment improves trust and conversion.\n\n- Operator-grade summary highlights intent, objections, and next steps.\n\n- Strict separation of template + data enables easy brand updates.\n\n- End-to-end HTML rendering inside n8n (no external templating service).\n\n- Works directly from chatbot Webhook payloads—minimal glue code.\n\n***\n\n\n## **Notes & Recommendations**\n\n- **Make dates dynamic:** Replace hardcoded “September 16th 2025” with something like:\\\n  `{{ new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}`\n\n- **Reply-To:** Set Gmail node **Reply-To** to the lead’s email for one-click responses.\n\n- **Recipients:** Point **Customer Acknowledgement** to the **lead’s email**, keep **Internal Lead Alert** to your team list (e.g., `sales@...`).\n\n- **Plain-text fallback:** Add a text alternative in Gmail options for better deliverability.\n\n- **Field fallbacks:** Wrap expressions with defaults to avoid blank strings (e.g., `{{ $('Webhook').item.json.body.lead.firstName || 'Traveler' }}`).\n\n- **Security/Branding:** Host images over HTTPS (already set) and ensure SPF/DKIM/DMARC are configured on your domain.\n\n- **Validation:** If `conversationData.history` is missing, the customer summary prompt already outputs a safe default.\n\n***\n\n\n## **Primary Node Map**\n\n- **Webhook** →\\\n  **Inquiry Acknowledgement Summarizer (gpt-4.1-mini)** → **Inquiry Acknowledgement Template (HTML)** → **Send a message1 (Gmail)**\\\n  **Lead Capture Summarizer (gpt-4.1-mini)** → **Lead Captured (HTML)** → **Send a message2 (Gmail)**\n\n**Template variables used**\n\n- Lead fields: `$('Webhook').item.json.body.lead.{firstName,lastName,email,phone,destination}`\n\n- AI HTML snippet: `$json.output` (from each summarizer track)\n",
+        "height": 3920,
+        "width": 1968,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -880,
+        -3616
+      ],
+      "id": "5c44f66e-596d-4750-a88d-9f9fed9cd79e",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Inquiry Acknowledgement Summarizer",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lead Capture Summarizer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lead Captured": {
+      "main": [
+        [
+          {
+            "node": "Send a message2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inquiry Acknowledgement Template": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Inquiry Acknowledgement Summarizer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inquiry Acknowledgement Summarizer": {
+      "main": [
+        [
+          {
+            "node": "Inquiry Acknowledgement Template",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Lead Capture Summarizer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lead Capture Summarizer": {
+      "main": [
+        [
+          {
+            "node": "Lead Captured",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "76270c0e-d322-4386-a175-65492ba8c695",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "65c5fc849bd0987404448fe5b36b45b187ec0b7797dfc130ff09763ad4babbe9"
+  },
+  "id": "zZz9PxijHSJbLoYT",
+  "tags": []
+}

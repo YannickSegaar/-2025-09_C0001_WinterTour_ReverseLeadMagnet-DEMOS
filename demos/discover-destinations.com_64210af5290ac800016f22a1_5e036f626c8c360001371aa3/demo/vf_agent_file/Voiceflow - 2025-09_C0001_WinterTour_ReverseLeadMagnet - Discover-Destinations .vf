@@ -1,0 +1,4403 @@
+{
+  "version": {
+    "_version": 13.03,
+    "autoSaveFromRestore": false,
+    "canvasTemplates": [],
+    "components": [],
+    "creatorID": 1077441,
+    "manualSave": false,
+    "model": {},
+    "name": "Initial Version",
+    "platformData": {
+      "slots": [],
+      "intents": [
+        {
+          "key": "None",
+          "name": "None",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        },
+        {
+          "key": "6797c2110cfd6c00ccbedd9f",
+          "name": "No",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "I'm good",
+              "slots": []
+            },
+            {
+              "text": "Nope",
+              "slots": []
+            },
+            {
+              "text": "I think I'm good thanks",
+              "slots": []
+            },
+            {
+              "text": "Definitely not",
+              "slots": []
+            },
+            {
+              "text": "Nope",
+              "slots": []
+            },
+            {
+              "text": "Under no circumstances",
+              "slots": []
+            },
+            {
+              "text": "Not at all",
+              "slots": []
+            },
+            {
+              "text": "Nope, not at all",
+              "slots": []
+            },
+            {
+              "text": "No way",
+              "slots": []
+            },
+            {
+              "text": "By no means",
+              "slots": []
+            },
+            {
+              "text": "Not in the slightest",
+              "slots": []
+            },
+            {
+              "text": "No chance",
+              "slots": []
+            },
+            {
+              "text": "Absolutely not",
+              "slots": []
+            },
+            {
+              "text": "Not at all",
+              "slots": []
+            },
+            {
+              "text": "Negative",
+              "slots": []
+            },
+            {
+              "text": "Sorry, no",
+              "slots": []
+            },
+            {
+              "text": "Definitely not",
+              "slots": []
+            },
+            {
+              "text": "That's wrong",
+              "slots": []
+            },
+            {
+              "text": "Incorrect",
+              "slots": []
+            },
+            {
+              "text": "Nope",
+              "slots": []
+            },
+            {
+              "text": "No",
+              "slots": []
+            }
+          ],
+          "noteID": "8a1620qxw",
+          "description": "Trigger this intent then the user responds negatively"
+        },
+        {
+          "key": "6797c2660cfd6c00ccbeddd1",
+          "name": "Yes",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "Definitely",
+              "slots": []
+            },
+            {
+              "text": "Indeed",
+              "slots": []
+            },
+            {
+              "text": "Of course",
+              "slots": []
+            },
+            {
+              "text": "Certainly",
+              "slots": []
+            },
+            {
+              "text": "Without question",
+              "slots": []
+            },
+            {
+              "text": "Sure",
+              "slots": []
+            },
+            {
+              "text": "Definitely",
+              "slots": []
+            },
+            {
+              "text": "You bet",
+              "slots": []
+            },
+            {
+              "text": "Without a doubt",
+              "slots": []
+            },
+            {
+              "text": "By all means",
+              "slots": []
+            },
+            {
+              "text": "Agreed",
+              "slots": []
+            },
+            {
+              "text": "Absolutely",
+              "slots": []
+            },
+            {
+              "text": "That's correct",
+              "slots": []
+            },
+            {
+              "text": "Indeed",
+              "slots": []
+            },
+            {
+              "text": "Affirmative",
+              "slots": []
+            },
+            {
+              "text": "You are right",
+              "slots": []
+            },
+            {
+              "text": "Correct",
+              "slots": []
+            },
+            {
+              "text": "Yep",
+              "slots": []
+            },
+            {
+              "text": "Yes",
+              "slots": []
+            }
+          ],
+          "noteID": "8a1630qc0",
+          "description": "Trigger this intent when the user responds positively."
+        }
+      ],
+      "settings": {
+        "restart": true,
+        "repeat": 100,
+        "locales": [
+          "en-US"
+        ],
+        "globalNoMatch": {
+          "type": "static",
+          "prompt": {
+            "content": [
+              {
+                "children": [
+                  {
+                    "text": "Sorry, I didn’t get that. Please try again."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "messageDelay": {
+          "durationMilliseconds": 500
+        },
+        "defaultVoice": "elevenlabs:eleven_turbo_v2_5:FGY2WhTYpPnrIDTdsKH5",
+        "deepgramASR": {
+          "silenceWaitMS": 10,
+          "punctuationWaitMS": 1000,
+          "partialWaitMS": 1500,
+          "interruptionWaitWords": 2,
+          "audioCue": null
+        }
+      },
+      "publishing": {
+        "avatar": "https://cdn.voiceflow.com/assets/logo.png",
+        "color": "#397DFF",
+        "description": "Hi, how can I help you today?",
+        "feedback": false,
+        "image": "https://cdn.voiceflow.com/assets/logo.png",
+        "persistence": "localStorage",
+        "position": "right",
+        "spacing": {
+          "side": 24,
+          "bottom": 24
+        },
+        "title": "Your AI agent",
+        "watermark": true,
+        "audioInterface": true
+      },
+      "platform": "webchat"
+    },
+    "programResources": {
+      "agents": {
+        "67db2b56cbe88befffef4623": {
+          "name": "Customer support specialist",
+          "settings": {
+            "model": "gpt-4.1-mini-2025-04-14",
+            "maxTokens": 2172,
+            "temperature": 0.3,
+            "reasoningEffort": null
+          },
+          "cardTool": null,
+          "apiTools": [],
+          "pathTools": [
+            {
+              "id": "68cacb622e910ad067373285",
+              "name": "lead_capture",
+              "variables": [],
+              "description": "# **Exit Condition Prompt — Lead Capture**\n\nUser agrees that they would like a **custom travel plan or itinerary**.\n\nBefore using the tools, respond in **one friendly sentence** to confirm their interest and explain you’ll connect them to receive a tailored itinerary."
+            },
+            {
+              "id": "684eb8732d4ddb7e9258a6c5",
+              "name": "show_travel_options",
+              "variables": [],
+              "description": "User wants to see what kind of options are available for different tours and travels.\n\n# **IMPORTANT:**\n\nBefore using this \"show_travel_options\" tool, **always** respond using one sentence that you're going to show destinations  and tell user to ask questions to learn more."
+            }
+          ],
+          "buttonTool": null,
+          "description": "An agent template for resolving issues and ensuring customer satisfaction with technical skill and empathy.",
+          "carouselTool": {
+            "enabled": false,
+            "description": "Displays a carousel of up to 10 cards, each containing a title, description, image, and optional action buttons."
+          },
+          "instructions": "## INSTRUCTIONS:\n\nYou are an AI assistant inside the website for **Discover Destinations**, a premier U.S.–based destination management company headquartered in Atlanta, GA. The company designs **custom travel experiences and fixed itineraries** for students, leisure travelers, corporations, honeymooners, and sports fans worldwide. Your name is **\"Discover Destination Smart Travel Guide.\"**\n\n***\n\n## TASK\n\n1. **Answer user questions** about Discover Destinations’ services, itineraries, specialties (educational tours, sports travel, honeymoons, corporate packages), destinations, and customer service approach using the knowledge base.\n\n2. **Inspire & inform** by sharing short travel ideas, tips, or highlights of Discover Destinations’ unique offerings (e.g., educational experiences at NASA facilities, major sporting events, romantic getaways).\n\n3. **Guide the conversation** toward the option of a **custom travel itinerary** by naturally suggesting it after answering questions or when the traveler shows excitement. Always phrase it as a helpful offer (e.g., “Would you like me to put together a custom itinerary for you?”).\n\n4. When a user expresses interest in travel options, destinations or tours, **always first respond** with one sentence indicating that you will show them various destinations and encourage them to ask questions for more information before proceeding to the exit condition \"show_travel_options\". \n\n_Remember:_\n\n- Do **not** fabricate information or URLs.\n\n- Do **not** introduce knowledge unrelated to Discover Destinations.\n\n- If information is unavailable, state it clearly.\n\n- Never sound pushy or sales-driven — focus on being helpful and conversational.\n\n***\n\n## TONE AND PERSONALITY\n\n- Greet visitors briefly, introduce yourself, and ask how you can assist today.\n\n- Friendly, enthusiastic, and professional — reflecting warmth and personalized service.\n\n- Keep answers concise (1–3 sentences unless more detail is requested).\n\n- Celebrate the traveler’s excitement and emphasize creating lasting memories (e.g., “That sounds like an unforgettable sports trip!”).\n\n- Naturally lead toward the idea of a **custom itinerary** as the best way to turn their ideas into reality.\n\n***\n\n## TOOLS\n\n### search_knowledge_base\n\nWhen to call:\n\n- Whenever the visitor requests or implies they need factual details.\n\n- For follow-up questions on the same topic — always search again; do not rely only on memory.\n\n- Even if you think you know the answer; search first to avoid outdated or invented information.\n\nIf no useful results:\n\n- Briefly state that you don’t have that information.\n\n- Never fabricate data, URLs, or claims.\n\n## Available Variables (for reference only):",
+          "functionTools": [
+            {
+              "variables": {
+                "vf_token": {
+                  "description": "",
+                  "defaultValue": "{684eb4012d4ddb7e9258a3f1}"
+                }
+              },
+              "functionID": "684eb308674753d4156007eb",
+              "description": null,
+              "captureResponse": {
+                "kb_chunks": "chunks"
+              }
+            }
+          ],
+          "webSearchTool": null,
+          "integrationTools": [],
+          "mcpIntegrationTools": [],
+          "knowledgeBaseTool": {
+            "enabled": false,
+            "description": "Triggered the knowledge base when you don't know the answer to a question."
+          }
+        }
+      },
+      "prompts": {
+        "68cbb6986bade29c2d24187a": {
+          "settings": {
+            "useStructuredOutput": false,
+            "model": "claude-4-sonnet",
+            "maxTokens": 5000,
+            "temperature": 0.3
+          },
+          "system": "You are a helpful assistant. Your job is to summarize a conversation between a virtual travel agent and a customer. You should summarize key parts of the conversation in bullet points. You don't need to include the customer's name or email. Your summary is for the TRAVEL AGENT, not the customer, so do not include clarifying questions as part of the conversation.\n\nOnly respond with the bullet pointed summary.\n\nConversation:",
+          "messages": [
+            {
+              "role": "user",
+              "content": "{vf_memory}"
+            }
+          ]
+        }
+      },
+      "apiTools": {},
+      "messages": {
+        "68cc09fc56c08e8529a762c2": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Take a look at some of our favorite destinations below, feel free to ask me anything that sparks your interest!"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "68cc09fc56c08e8529a762c5": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Thank you for your response! We’ve received your request for a custom itinerary"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": 1500
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "68cc09fc56c08e8529a762c8": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "One of our travel specialists will be in touch with you soon, and you’ll also receive a confirmation email with the details of your inquiry! 📥"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "68cc09fc56c08e8529a762cb": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Is there is anything else I can help you with? I am always here to help 😊"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": 1500
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "68cc09fc56c08e8529a762ce": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Hello! 👋"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": 2000
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "68cc09fc56c08e8529a762d1": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Perfect! Just drop a few details below so we can send your personalized itinerary to you! ✈️🌎"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": 1500
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "68cc0ce8606fc6ce53802fff": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Pick a demo:"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        }
+      },
+      "integrationTools": {},
+      "mcpIntegrationTools": {}
+    },
+    "prototype": {
+      "type": "chat",
+      "data": {
+        "name": "AI Travel Agent",
+        "locales": [
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [],
+        "slots": []
+      },
+      "context": {
+        "stack": [
+          {
+            "diagramID": "64dbb6696a8fab0013dba194",
+            "storage": {},
+            "variables": {}
+          }
+        ],
+        "variables": {}
+      },
+      "surveyorContext": {
+        "nonDraftResponsesMap": {},
+        "responseMessagesByDiscriminatorIDMap": {},
+        "responseDiscriminatorsByResponseIDMap": {},
+        "agentMcpIntegrationToolsByAgentIDMap": {},
+        "functionDefinitions": {
+          "684eb308674753d4156007eb": {
+            "name": "search_knowledge_base",
+            "codeId": "68cac9b5ec4cdbd2280e073e-684eb308674753d4156007eb-lienebna.js",
+            "pathCodes": [
+              "success",
+              "error"
+            ],
+            "inputVars": {
+              "user_question": {
+                "type": "text",
+                "description": "User question. Make sure to use correct grammar and include relevant things if it's a follow-up question."
+              },
+              "vf_token": {
+                "type": "text",
+                "description": "api token"
+              }
+            },
+            "outputVars": {
+              "chunks": {
+                "type": "text",
+                "description": ""
+              }
+            },
+            "description": "Use this function for all factual questions or clarifications about Discover Destinations'—its process, policies, fees, destinations, advisor bios, sample itineraries, blog posts, or any other information published on the site."
+          }
+        },
+        "referencedResponseIDs": [
+          "68cc09fc56c08e8529a762ce",
+          "68cc09fc56c08e8529a762c2",
+          "68cc09fc56c08e8529a762d1",
+          "68cc09fc56c08e8529a762c5",
+          "68cc09fc56c08e8529a762c8",
+          "68cc09fc56c08e8529a762cb",
+          "68cc0ce8606fc6ce53802fff"
+        ],
+        "referencedAgentsIDs": [
+          "67db2b56cbe88befffef4623"
+        ],
+        "referencedAPIToolIDs": [],
+        "referencedIntegrationToolIDs": [],
+        "slotsMap": {},
+        "platform": "webchat",
+        "products": {},
+        "extraSlots": [],
+        "interfaces": [],
+        "permissions": [],
+        "projectType": "chat",
+        "extraIntents": [],
+        "usedEventsSet": [],
+        "usedIntentsSet": [],
+        "goToIntentsSet": [],
+        "entitiesMap": {},
+        "variableMap": {},
+        "intentsMap": {},
+        "requiredEntitiesMap": {},
+        "eventsMap": {},
+        "cmsVariables": {
+          "sessions": {
+            "isSystem": true,
+            "description": "The number of times a particular user has opened the app.",
+            "defaultValue": null
+          },
+          "user_id": {
+            "isSystem": true,
+            "description": "The user's unique ID.",
+            "defaultValue": null
+          },
+          "timestamp": {
+            "isSystem": true,
+            "description": "UNIX timestamp (number of seconds since January 1st, 1970 at UTC).",
+            "defaultValue": null
+          },
+          "platform": {
+            "isSystem": true,
+            "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+            "defaultValue": null
+          },
+          "locale": {
+            "isSystem": true,
+            "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+            "defaultValue": null
+          },
+          "intent_confidence": {
+            "isSystem": true,
+            "description": "The confidence interval (measured as a value from 0 to 100) for the most recently matched intent.",
+            "defaultValue": null
+          },
+          "last_response": {
+            "isSystem": true,
+            "description": "The agent's last response (text/speak) in a string.",
+            "defaultValue": null
+          },
+          "last_event": {
+            "isSystem": true,
+            "description": "The object containing the last event that the user client has triggered.",
+            "defaultValue": null
+          },
+          "last_utterance": {
+            "isSystem": true,
+            "description": "The user's last utterance in a text string.",
+            "defaultValue": null
+          },
+          "vf_memory": {
+            "isSystem": true,
+            "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+            "defaultValue": ""
+          },
+          "summary": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "short summary of the converastion and why user wants to leave his contacts",
+            "defaultValue": null
+          },
+          "full_name": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Name and Surname",
+            "defaultValue": null
+          },
+          "email": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "email of the user",
+            "defaultValue": null
+          },
+          "kb_chunks": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": null
+          },
+          "user_action": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "",
+            "defaultValue": "`none`"
+          },
+          "destination": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Morocco",
+            "defaultValue": null
+          },
+          "Conversation_Summary": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "A summary of the conversation between the virtual travel agent and the customer.",
+            "defaultValue": null
+          },
+          "clean_vf_memory": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "JSON cleaned {vf_memory} variable",
+            "defaultValue": null
+          }
+        },
+        "cmsEntities": {}
+      },
+      "settings": {},
+      "platform": "webchat"
+    },
+    "settings": {
+      "voice": {
+        "tts": {
+          "provider": "elevenlabs",
+          "model": "eleven_turbo_v2_5",
+          "voice": "FGY2WhTYpPnrIDTdsKH5",
+          "settings": {}
+        },
+        "failureMessage": "We’re sorry, but the call cannot be completed at this time. Please try again later.",
+        "hasCallRecording": true
+      },
+      "widget": {
+        "type": "chat",
+        "chat": {
+          "voiceInput": false,
+          "voiceOutput": false,
+          "renderMode": "popover",
+          "headerImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1758123071053-discoverdestinations---voiceflow-avatar.png"
+          },
+          "agentImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1758123076459-discoverdestinations---voiceflow-avatar.png"
+          },
+          "banner": {
+            "title": "Discover Destinations",
+            "description": "How can I help you today?",
+            "enabled": true,
+            "imageURL": "https://cm4-production-assets.s3.amazonaws.com/1758123087104-discoverdestinations---voiceflow-avatar.png"
+          },
+          "placeholderText": "Message...",
+          "disclaimer": {
+            "enabled": false,
+            "title": "Privacy notice",
+            "description": "Before we can proceed with your conversation, we kindly ask you to review and accept our privacy policy, outlining how we handle and protect your personal information throughout our services.",
+            "primaryButtonText": "Submit",
+            "secondaryButtonText": "Privacy policy",
+            "secondaryButtonURL": ""
+          },
+          "aiDisclaimer": {
+            "text": "Generated by AI, double-check for accuracy.",
+            "enabled": false
+          },
+          "handoffToAgentImageURL": "",
+          "streamingDisabled": false
+        },
+        "voice": {
+          "renderMode": "full",
+          "content": {
+            "talkingText": "Talk to interrupt",
+            "endButtonText": "End",
+            "listeningText": "Listening...",
+            "startButtonText": "Start a call",
+            "callToActionText": "How can I help you?"
+          }
+        },
+        "common": {
+          "sideSpacing": "20",
+          "bottomSpacing": "20",
+          "position": "right",
+          "fontFamily": "UCity Pro",
+          "primaryColor": {
+            "color": "#ED4341",
+            "palette": {
+              "50": "#FDE8E8",
+              "100": "#FBD1D0",
+              "200": "#F6A3A2",
+              "300": "#F27573",
+              "400": "#ED4745",
+              "500": "#E91916",
+              "600": "#BA1412",
+              "700": "#8C0F0D",
+              "800": "#5D0A09",
+              "900": "#2F0504"
+            }
+          },
+          "poweredBy": false,
+          "launcher": {
+            "type": "both",
+            "text": "Here to help!"
+          },
+          "footerLink": {
+            "enabled": false,
+            "text": ""
+          },
+          "persistence": "localStorage"
+        },
+        "security": {
+          "approvedDomains": {
+            "enabled": false,
+            "domains": ""
+          },
+          "disableTranscript": false
+        }
+      },
+      "memory": {
+        "turns": 25
+      },
+      "globalNoMatch": {
+        "type": "static",
+        "prompt": [
+          {
+            "text": [
+              "Sorry, I didn’t get that. Please try again."
+            ]
+          }
+        ]
+      },
+      "intentClassification": {
+        "type": "rag",
+        "params": {
+          "model": "claude-3.5-haiku",
+          "temperature": 0.1
+        },
+        "promptWrapper": null
+      }
+    },
+    "topics": [
+      {
+        "type": "DIAGRAM",
+        "sourceID": "64dbb6696a8fab0013dba194"
+      }
+    ],
+    "variables": [
+      "sessions",
+      "user_id",
+      "timestamp",
+      "platform",
+      "locale",
+      "intent_confidence",
+      "last_response",
+      "last_event",
+      "last_utterance",
+      "vf_memory",
+      "summary",
+      "full_name",
+      "email",
+      "kb_chunks",
+      "user_action",
+      "destination",
+      "Conversation_Summary",
+      "clean_vf_memory"
+    ],
+    "_id": "68cac9b5ec4cdbd2280e073e",
+    "updatedAt": "2025-09-18T13:54:02.747Z",
+    "publishedAt": "2024-09-27T16:54:27.996Z",
+    "domains": [
+      {
+        "id": "cla06iyr900b206pkh8d4ap8n",
+        "name": "Home",
+        "live": true,
+        "topicIDs": [
+          "64dbb6696a8fab0013dba194"
+        ],
+        "rootDiagramID": "64dbb6696a8fab0013dba194",
+        "updatedBy": 1077441,
+        "updatedAt": "2025-09-17T14:46:13.442Z"
+      }
+    ],
+    "projectID": "68cac9b5ec4cdbd2280e073d",
+    "rootDiagramID": "64dbb6696a8fab0013dba194",
+    "templateDiagramID": "64dbb6696a8fab0013dba195"
+  },
+  "diagrams": {
+    "68cc09e656c08e8529a762c1": {
+      "name": "2. (17 SEP 2025, 16:30 CEST) - Discover Destinations",
+      "type": "TOPIC",
+      "zoom": 37.58956909349828,
+      "nodes": {
+        "68cc09fc8210b5c0e8b750e6": {
+          "type": "block",
+          "data": {
+            "name": "Discover Destinations - AI Travel Agent",
+            "color": "#56b365",
+            "triggers": [],
+            "steps": [
+              "68cc09fc8210b5c0e8b75100"
+            ]
+          },
+          "nodeID": "68cc09fc8210b5c0e8b750e6",
+          "coords": [
+            -13.332307282419606,
+            -125.83561344464695
+          ]
+        },
+        "68cc09fc8210b5c0e8b750e8": {
+          "type": "block",
+          "data": {
+            "name": "Start - Greeting Block",
+            "color": "",
+            "triggers": [],
+            "steps": [
+              "68cc09fc8210b5c0e8b75104"
+            ]
+          },
+          "nodeID": "68cc09fc8210b5c0e8b750e8",
+          "coords": [
+            -479.93080412957545,
+            -176.06630367831121
+          ]
+        },
+        "68cc09fc8210b5c0e8b750ec": {
+          "type": "block",
+          "data": {
+            "name": "Carousel Introduction Sentence",
+            "color": "",
+            "triggers": [],
+            "steps": [
+              "68cc09fc8210b5c0e8b7510f"
+            ]
+          },
+          "nodeID": "68cc09fc8210b5c0e8b750ec",
+          "coords": [
+            376.03439821519464,
+            232.5557188224947
+          ]
+        },
+        "68cc09fc8210b5c0e8b750ee": {
+          "type": "block",
+          "data": {
+            "name": "Discover Destinations Options",
+            "color": "#5b9fd7",
+            "triggers": [],
+            "steps": [
+              "68cc09fc8210b5c0e8b75112",
+              "68cc09fc8210b5c0e8b75120"
+            ]
+          },
+          "nodeID": "68cc09fc8210b5c0e8b750ee",
+          "coords": [
+            869.0718257770538,
+            311.4033058137478
+          ]
+        },
+        "68cc09fc8210b5c0e8b750f0": {
+          "type": "block",
+          "data": {
+            "name": "Lead Capture Introduction Sentence",
+            "color": "",
+            "triggers": [],
+            "steps": [
+              "68cc09fc8210b5c0e8b75123"
+            ]
+          },
+          "nodeID": "68cc09fc8210b5c0e8b750f0",
+          "coords": [
+            555.3280604103072,
+            -154.58165700946702
+          ]
+        },
+        "68cc09fc8210b5c0e8b750f6": {
+          "type": "block",
+          "data": {
+            "name": "Discover Destinations Lead Capture Form",
+            "color": "#56b365",
+            "triggers": [],
+            "steps": [
+              "68cc09fc8210b5c0e8b7512c",
+              "68cc09fc8210b5c0e8b75130"
+            ]
+          },
+          "nodeID": "68cc09fc8210b5c0e8b750f6",
+          "coords": [
+            1095.1682157193868,
+            -69.27424262962639
+          ]
+        },
+        "68cc09fc8210b5c0e8b750f8": {
+          "type": "block",
+          "data": {
+            "name": "Ending Block",
+            "color": "",
+            "triggers": [],
+            "steps": [
+              "68cc09fc8210b5c0e8b75133",
+              "68cc09fc8210b5c0e8b75136",
+              "68cc09fc8210b5c0e8b75139",
+              "68cc09fc8210b5c0e8b7513c"
+            ]
+          },
+          "nodeID": "68cc09fc8210b5c0e8b750f8",
+          "coords": [
+            1612.106277448407,
+            115.8242607309982
+          ]
+        },
+        "68cc09fc8210b5c0e8b750fe": {
+          "type": "actions",
+          "data": {
+            "name": "",
+            "steps": [
+              "68cc09fc8210b5c0e8b75140"
+            ]
+          },
+          "nodeID": "68cc09fc8210b5c0e8b750fe",
+          "coords": [
+            -54.43574820632455,
+            -218.24584227014785
+          ]
+        },
+        "68cc09fc8210b5c0e8b75100": {
+          "type": "agent",
+          "data": {
+            "name": "Untitled agent",
+            "agentID": "67db2b56cbe88befffef4623",
+            "listenForOtherTriggers": true,
+            "exitEveryConversationalTurn": false,
+            "portsV2": {
+              "byKey": {
+                "684eb8732d4ddb7e9258a6c5": {
+                  "type": "",
+                  "target": "68cc09fc8210b5c0e8b7510f",
+                  "id": "68cc09fc8210b5c0e8b75101",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          152.67,
+                          70.16
+                        ]
+                      },
+                      {
+                        "point": [
+                          181.35,
+                          70.16
+                        ]
+                      },
+                      {
+                        "point": [
+                          181.35,
+                          311.56
+                        ]
+                      },
+                      {
+                        "point": [
+                          210.03,
+                          311.56
+                        ],
+                        "allowedToTop": false
+                      }
+                    ]
+                  }
+                },
+                "68cacb622e910ad067373285": {
+                  "type": "",
+                  "target": "68cc09fc8210b5c0e8b750f0",
+                  "id": "68cc09fc8210b5c0e8b75102",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          152.67,
+                          70.16
+                        ]
+                      },
+                      {
+                        "point": [
+                          271.5,
+                          70.16
+                        ]
+                      },
+                      {
+                        "point": [
+                          271.5,
+                          -127.58
+                        ]
+                      },
+                      {
+                        "point": [
+                          390.33,
+                          -127.58
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75100"
+        },
+        "68cc09fc8210b5c0e8b75104": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "68cc09fc56c08e8529a762ce",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "68cc09fc8210b5c0e8b750e6",
+                  "id": "68cc09fc8210b5c0e8b75105",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -313.93,
+                          -97.07
+                        ]
+                      },
+                      {
+                        "point": [
+                          -178.33,
+                          -98.84
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75104"
+        },
+        "68cc09fc8210b5c0e8b7510f": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "68cc09fc56c08e8529a762c2",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "68cc09fc8210b5c0e8b750ee",
+                  "id": "68cc09fc8210b5c0e8b75110",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          542.03,
+                          338.56
+                        ]
+                      },
+                      {
+                        "point": [
+                          704.07,
+                          338.4
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b7510f"
+        },
+        "68cc09fc8210b5c0e8b75112": {
+          "type": "carousel",
+          "data": {
+            "name": "Card",
+            "cards": [
+              {
+                "id": "zh1fz3p7y",
+                "title": "Canada",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Embrace Canada’s wild beauty, from mist-shrouded falls to cosmopolitan cities framed by endless forests and lakes."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1758136641711-imagen-3-prediction-7.png",
+                "buttons": [
+                  {
+                    "id": "q31mc3vlv",
+                    "name": "Discover Canada",
+                    "intent": null
+                  }
+                ]
+              },
+              {
+                "id": "k21jd3pw1",
+                "title": "USA",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Discover the USA’s electric energy — where iconic skylines, coastal drives, and cultural landmarks ignite every journey."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1758137188264-usa.png",
+                "buttons": [
+                  {
+                    "id": "751qj3vmx",
+                    "name": "Discover USA",
+                    "intent": null
+                  }
+                ]
+              },
+              {
+                "id": "8b1js3p6t",
+                "title": "Latin America",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Venture through Latin America’s vibrant mosaic of ancient ruins, tropical jungles, and spirited rhythms."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1758137193566-latin-america.png",
+                "buttons": [
+                  {
+                    "id": "8l1rq3v3x",
+                    "name": "Discover Latin America",
+                    "intent": null
+                  }
+                ]
+              },
+              {
+                "id": "4a1k33pa5",
+                "title": "Caribbean",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Sail into the Caribbean dream — turquoise waters, white sands, and island sunsets that linger long after."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1758137197168-caribbean.png",
+                "buttons": [
+                  {
+                    "id": "2u1sy3vl4",
+                    "name": "Discover Caribbean",
+                    "intent": null
+                  }
+                ]
+              },
+              {
+                "id": "66ct3vwu",
+                "title": "Europe",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Uncover Europe’s timeless allure, where grand capitals, river cruises, and cobblestone streets meet modern flair."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1758137201623-europe.png",
+                "buttons": [
+                  {
+                    "id": "g01u93v9q",
+                    "name": "Discover Europe",
+                    "intent": null
+                  }
+                ]
+              },
+              {
+                "id": "4sd93vzu",
+                "title": "Middle East",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Experience the Middle East’s striking contrasts — futuristic skylines, golden deserts, and centuries-old traditions."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1758137204581-middle-east.png",
+                "buttons": [
+                  {
+                    "id": "2o1vl3ve2",
+                    "name": "Discover Asia",
+                    "intent": null
+                  }
+                ]
+              },
+              {
+                "id": "tedq3vde",
+                "title": "Asia",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Journey through Asia’s kaleidoscope of temples, neon cities, and landscapes that awaken every sense."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1758137207952-asia.png",
+                "buttons": [
+                  {
+                    "id": "n81x03vfa",
+                    "name": "Discover Asia",
+                    "intent": null
+                  }
+                ]
+              },
+              {
+                "id": "v2e93vpa",
+                "title": "Australia & NZ",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Explore Australia & New Zealand’s rugged coastlines, lush vineyards, and adventures beneath endless southern skies."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1758137212784-australia--nz.png",
+                "buttons": [
+                  {
+                    "id": "gz1o63vqi",
+                    "name": "Discover Australia & NZ",
+                    "intent": null
+                  }
+                ]
+              },
+              {
+                "id": "zseq3vul",
+                "title": "Africa",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Awaken to Africa’s epic scale — from vast savannahs and coastal wonders to vibrant cities alive with culture."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1758137215363-africa.png",
+                "buttons": [
+                  {
+                    "id": "251yg3v2e",
+                    "name": "Discover Africa",
+                    "intent": null
+                  }
+                ]
+              }
+            ],
+            "layout": "Carousel",
+            "noMatch": null,
+            "noReply": null,
+            "portsV2": {
+              "byKey": {
+                "q31mc3vlv": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b75116"
+                },
+                "gz1o63vqi": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b75117"
+                },
+                "751qj3vmx": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b75118"
+                },
+                "8l1rq3v3x": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b75119"
+                },
+                "2u1sy3vl4": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b7511a"
+                },
+                "g01u93v9q": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b7511b"
+                },
+                "2o1vl3ve2": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b7511c"
+                },
+                "n81x03vfa": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b7511d"
+                },
+                "251yg3v2e": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b7511e"
+                }
+              },
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b75113"
+                },
+                "no-reply": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b75115"
+                },
+                "else": {
+                  "type": "else",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b75114"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75112"
+        },
+        "68cc09fc8210b5c0e8b75120": {
+          "type": "capture-v3",
+          "data": {
+            "name": "Capture",
+            "capture": {
+              "type": "user-reply",
+              "variableID": "last_utterance"
+            },
+            "listenForOtherTriggers": false,
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "68cc0d3a8210b5c0e8b75205",
+                  "id": "68cc09fc8210b5c0e8b75121",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75120"
+        },
+        "68cc09fc8210b5c0e8b75123": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "68cc09fc56c08e8529a762d1",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "68cc09fc8210b5c0e8b750f6",
+                  "id": "68cc09fc8210b5c0e8b75124",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          721.33,
+                          -46.58
+                        ]
+                      },
+                      {
+                        "point": [
+                          935.52,
+                          -44.95
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75123"
+        },
+        "68cc09fc8210b5c0e8b7512c": {
+          "type": "code",
+          "data": {
+            "name": "",
+            "code": "// Check if vf_memory exists and is not empty\nif (vf_memory && typeof vf_memory === 'string') {\n    // Clean the vf_memory variable\n    clean_vf_memory = vf_memory\n        .replace(/[^\\w\\s.,!?-]/g, '') // Remove special characters except basic punctuation\n        .replace(/\\s+/g, ' ')         // Replace multiple spaces with single space\n        .trim();                      // Remove leading/trailing whitespace\n} else if (vf_memory && typeof vf_memory === 'object') {\n    // If vf_memory is an object, stringify and clean it\n    clean_vf_memory = JSON.stringify(vf_memory)\n        .replace(/[^\\w\\s.,!?:-]/g, '')\n        .replace(/\\s+/g, ' ')\n        .trim();\n} else {\n    // Set to empty string if vf_memory is null/undefined\n    clean_vf_memory = '';\n}",
+            "paths": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b7512e"
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b7512d"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b7512c"
+        },
+        "68cc09fc8210b5c0e8b75130": {
+          "type": "trace",
+          "data": {
+            "name": "ext_discoverLeadForm",
+            "_v": 1,
+            "paths": [
+              {
+                "label": "",
+                "isDefault": true
+              }
+            ],
+            "payload": {
+              "name": "ext_discoverLeadForm",
+              "body": "{\n  \"conversationHistory\": \"{clean_vf_memory}\"\n}",
+              "bodyType": "json",
+              "scope": "local",
+              "isBlocking": true
+            },
+            "defaultPath": 0,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": [
+                {
+                  "type": "",
+                  "target": "68cc09fc8210b5c0e8b750f8",
+                  "id": "68cc09fc8210b5c0e8b75131",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          1261.17,
+                          139.98
+                        ]
+                      },
+                      {
+                        "point": [
+                          1447.11,
+                          142.82
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75130"
+        },
+        "68cc09fc8210b5c0e8b75133": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "68cc09fc56c08e8529a762c5",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b75134"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75133"
+        },
+        "68cc09fc8210b5c0e8b75136": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "68cc09fc56c08e8529a762c8",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b75137"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75136"
+        },
+        "68cc09fc8210b5c0e8b75139": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "68cc09fc56c08e8529a762cb",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "68cc09fc8210b5c0e8b7513a"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75139"
+        },
+        "68cc09fc8210b5c0e8b7513c": {
+          "type": "capture-v3",
+          "data": {
+            "name": "Capture",
+            "capture": {
+              "type": "user-reply",
+              "variableID": "last_utterance"
+            },
+            "listenForOtherTriggers": false,
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "68cc09fc8210b5c0e8b750fe",
+                  "id": "68cc09fc8210b5c0e8b7513d",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b7513c"
+        },
+        "68cc09fc8210b5c0e8b75140": {
+          "type": "goToNode",
+          "data": {
+            "name": "",
+            "nodeID": "68caf43c0c5c011289bd4f6b",
+            "diagramID": "64dbb6696a8fab0013dba194",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09fc8210b5c0e8b75140"
+        },
+        "68cc0a138210b5c0e8b751a3": {
+          "type": "markup_text",
+          "data": {
+            "scale": 4.372268429010824,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "text": "DISCOVER DESTINATIONS (17 SEP 2025)",
+                    "fontWeight": "700"
+                  }
+                ]
+              },
+              {
+                "textAlign": "center",
+                "children": [
+                  {
+                    "fontWeight": "700",
+                    "text": ""
+                  },
+                  {
+                    "type": "link",
+                    "url": "https://www.discover-destinations.com/",
+                    "children": [
+                      {
+                        "text": "https://www.discover-destinations.com/",
+                        "color": {
+                          "r": 93,
+                          "g": 157,
+                          "b": 245,
+                          "a": 1
+                        },
+                        "underline": true
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 766.8259155375973,
+            "backgroundColor": {
+              "r": 197,
+              "g": 231,
+              "b": 246,
+              "a": 1
+            },
+            "name": "Block"
+          },
+          "nodeID": "68cc0a138210b5c0e8b751a3",
+          "coords": [
+            265.8930673659414,
+            -643.4093267519877
+          ]
+        },
+        "68cc0a408210b5c0e8b751a6": {
+          "type": "markup_image",
+          "data": {
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1758202431757-discoverdestinations_voiceflow_avatar.png",
+            "width": 1089.3970899458645,
+            "height": 1089.3970899458645,
+            "rotate": 0,
+            "name": "Block"
+          },
+          "nodeID": "68cc0a408210b5c0e8b751a6",
+          "coords": [
+            659.7502399383843,
+            -1484.0306575364068
+          ]
+        },
+        "68cc0d3a8210b5c0e8b75204": {
+          "type": "goToNode",
+          "data": {
+            "name": "",
+            "nodeID": "68cc09fc8210b5c0e8b750e6",
+            "diagramID": "68cc09e656c08e8529a762c1",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc0d3a8210b5c0e8b75204"
+        },
+        "68cc0d3a8210b5c0e8b75205": {
+          "type": "actions",
+          "data": {
+            "name": "",
+            "steps": [
+              "68cc0d3a8210b5c0e8b75204"
+            ]
+          },
+          "nodeID": "68cc0d3a8210b5c0e8b75205",
+          "coords": [
+            0,
+            0
+          ]
+        }
+      },
+      "offsetX": 764.5352355585626,
+      "offsetY": 541.9283381220141,
+      "modified": 1758202342,
+      "variables": [],
+      "creatorID": 1077441,
+      "_id": "68cc09e656c08e8529a762c1",
+      "diagramID": "68cc09e656c08e8529a762c1",
+      "versionID": "68cac9b5ec4cdbd2280e073e"
+    },
+    "68cc099e56c08e8529a762c0": {
+      "name": "1. (17 SEP 2025, 15:30 CEST) - Travel Agent",
+      "type": "TOPIC",
+      "zoom": 62.42147804635923,
+      "nodes": {
+        "68cc099e2228390006e2af0f": {
+          "coords": [
+            360,
+            120
+          ],
+          "type": "block",
+          "data": {
+            "name": "",
+            "color": "",
+            "steps": [
+              "68cc099e2228390006e2af0e"
+            ],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc099e2228390006e2af0f"
+        },
+        "68cc099e2228390006e2af0e": {
+          "nodeID": "68cc099e2228390006e2af0e",
+          "type": "trigger",
+          "data": {
+            "name": "",
+            "items": [],
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "id": "68cc099e2228390006e2af10",
+                  "type": "next",
+                  "data": null,
+                  "target": null
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          }
+        },
+        "68cc09a38210b5c0e8b74f86": {
+          "type": "block",
+          "data": {
+            "name": "AI Travel Agent",
+            "color": "#56b365",
+            "triggers": [],
+            "steps": [
+              "68cc09a38210b5c0e8b74f8e"
+            ]
+          },
+          "nodeID": "68cc09a38210b5c0e8b74f86",
+          "coords": [
+            721.6140245745173,
+            173.1142160566134
+          ]
+        },
+        "68cc09a38210b5c0e8b74f88": {
+          "type": "block",
+          "data": {
+            "name": "Africa options",
+            "color": "#5b9fd7",
+            "triggers": [],
+            "steps": [
+              "68cc09a38210b5c0e8b74f91",
+              "68cc09a38210b5c0e8b74f96"
+            ]
+          },
+          "nodeID": "68cc09a38210b5c0e8b74f88",
+          "coords": [
+            722.3859754254827,
+            570.8857839433865
+          ]
+        },
+        "68cc09a38210b5c0e8b74f8a": {
+          "type": "actions",
+          "data": {
+            "name": "",
+            "steps": [
+              "68cc09a38210b5c0e8b74f98"
+            ]
+          },
+          "nodeID": "68cc09a38210b5c0e8b74f8a",
+          "coords": [
+            720.5105836506126,
+            120.70398723111248
+          ]
+        },
+        "68cc09a38210b5c0e8b74f8c": {
+          "type": "actions",
+          "data": {
+            "name": "",
+            "steps": [
+              "68cc09a38210b5c0e8b74f99"
+            ]
+          },
+          "nodeID": "68cc09a38210b5c0e8b74f8c",
+          "coords": [
+            720.5105836506126,
+            120.70398723111248
+          ]
+        },
+        "68cc09a38210b5c0e8b74f8e": {
+          "type": "agent",
+          "data": {
+            "name": "Untitled agent",
+            "agentID": "67db2b56cbe88befffef4623",
+            "listenForOtherTriggers": true,
+            "exitEveryConversationalTurn": false,
+            "portsV2": {
+              "byKey": {
+                "684eb8732d4ddb7e9258a6c5": {
+                  "type": "",
+                  "target": "68cc09a38210b5c0e8b74f8a",
+                  "id": "68cc09a38210b5c0e8b74f8f",
+                  "data": {}
+                },
+                "68cacb622e910ad067373285": {
+                  "id": "68cc09a38210b5c0e8b74fae",
+                  "target": null,
+                  "type": ""
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09a38210b5c0e8b74f8e"
+        },
+        "68cc09a38210b5c0e8b74f91": {
+          "type": "carousel",
+          "data": {
+            "name": "Card",
+            "cards": [
+              {
+                "id": "zh1fz3p7y",
+                "title": "Morocco",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Base yourself at Amanjena on Marrakech’s palm‑dotted outskirts, then venture into the Sahara for a night of starlit glamping."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1749989243526-390souks_of_morocco.jpg",
+                "buttons": []
+              },
+              {
+                "id": "k21jd3pw1",
+                "title": "Namibia",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Road‑trip past the rust‑red dunes of Sossusvlei to wildlife‑rich Etosha, combining cinematic desert vistas with private‑reserve game drives."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1749989249321-namibia.jpeg",
+                "buttons": []
+              },
+              {
+                "id": "8b1js3p6t",
+                "title": "Rwanda",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Stay at eco‑chic Bisate Lodge and trek Volcanoes National Park for a once‑in‑a‑lifetime face‑to‑face encounter with mountain gorillas."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1749989253606-rwanda.jpg",
+                "buttons": []
+              },
+              {
+                "id": "4a1k33pa5",
+                "title": "South Africa",
+                "description": [
+                  {
+                    "children": [
+                      {
+                        "text": "Pair Big‑Five game drives at Singita Sabi Sand with Cape Town’s world‑class wine tasting for the quintessential bush‑and‑city combo."
+                      }
+                    ]
+                  }
+                ],
+                "imageUrl": "https://cm4-production-assets.s3.amazonaws.com/1749989258060-the-beautiful-coastline-of-cape-town-644441529508629.jpg",
+                "buttons": []
+              }
+            ],
+            "layout": "Carousel",
+            "noMatch": null,
+            "noReply": null,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "68cc09a38210b5c0e8b74f92"
+                },
+                "no-reply": {
+                  "type": "",
+                  "target": null,
+                  "id": "68cc09a38210b5c0e8b74f94"
+                },
+                "else": {
+                  "type": "else",
+                  "target": null,
+                  "id": "68cc09a38210b5c0e8b74f93"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09a38210b5c0e8b74f91"
+        },
+        "68cc09a38210b5c0e8b74f96": {
+          "type": "capture-v3",
+          "data": {
+            "name": "Capture",
+            "capture": {
+              "type": "user-reply",
+              "variableID": "last_utterance"
+            },
+            "listenForOtherTriggers": false,
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "68cc09a38210b5c0e8b74f8c",
+                  "id": "68cc09a38210b5c0e8b74f97",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09a38210b5c0e8b74f96"
+        },
+        "68cc09a38210b5c0e8b74f98": {
+          "type": "goToNode",
+          "data": {
+            "name": "",
+            "nodeID": "684eb4f984aa4f63da6e1842",
+            "diagramID": "64dbb6696a8fab0013dba194",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09a38210b5c0e8b74f98"
+        },
+        "68cc09a38210b5c0e8b74f99": {
+          "type": "goToNode",
+          "data": {
+            "name": "",
+            "nodeID": "67db2b51c6c175f16d898091",
+            "diagramID": "64dbb6696a8fab0013dba194",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc09a38210b5c0e8b74f99"
+        }
+      },
+      "offsetX": 322.5239665713508,
+      "offsetY": 206.6350768097855,
+      "modified": 1758202270,
+      "variables": [],
+      "creatorID": 1077441,
+      "_id": "68cc099e56c08e8529a762c0",
+      "diagramID": "68cc099e56c08e8529a762c0",
+      "versionID": "68cac9b5ec4cdbd2280e073e"
+    },
+    "64dbb6696a8fab0013dba195": {
+      "name": "Template Diagram",
+      "type": "TEMPLATE",
+      "zoom": 100,
+      "nodes": {},
+      "offsetX": 0,
+      "offsetY": 0,
+      "modified": 1701833501,
+      "creatorID": 1077441,
+      "variables": [],
+      "menuItems": [],
+      "_id": "68cac9b5ec4cdbd2280e0740",
+      "diagramID": "64dbb6696a8fab0013dba195",
+      "versionID": "68cac9b5ec4cdbd2280e073e"
+    },
+    "64dbb6696a8fab0013dba194": {
+      "name": "ROOT",
+      "type": "TOPIC",
+      "zoom": 58.31972198636145,
+      "nodes": {
+        "start00000000000000000000": {
+          "type": "start",
+          "data": {
+            "name": "Start",
+            "color": "#56b365",
+            "steps": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "68cc0ce88210b5c0e8b751ab",
+                  "id": "6032afcf359e8c14c06c0319",
+                  "data": {}
+                }
+              },
+              "dynamic": []
+            },
+            "label": "Start"
+          },
+          "nodeID": "start00000000000000000000",
+          "coords": [
+            -1281.6336360808134,
+            -313.89154986385006
+          ]
+        },
+        "68cc0ce88210b5c0e8b751ab": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "68cc0ce8606fc6ce53802fff",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "68cc0ce88210b5c0e8b751ac"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc0ce88210b5c0e8b751ab"
+        },
+        "68cc0ce88210b5c0e8b751ad": {
+          "type": "block",
+          "data": {
+            "name": "Start - Pick a demo",
+            "steps": [
+              "68cc0ce88210b5c0e8b751ab",
+              "68cc0cf88210b5c0e8b751b4"
+            ],
+            "color": ""
+          },
+          "nodeID": "68cc0ce88210b5c0e8b751ad",
+          "coords": [
+            -969.3108623603097,
+            -334.0285578181908
+          ]
+        },
+        "68cc0cf88210b5c0e8b751b4": {
+          "type": "buttons-v2",
+          "data": {
+            "name": "Buttons",
+            "items": [
+              {
+                "id": "cmfpgqy6h02r93b7vsg9t0jb5",
+                "label": [
+                  {
+                    "text": [
+                      "Discover Destinations"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "listenForOtherTriggers": true,
+            "portsV2": {
+              "byKey": {
+                "cmfpgqy6h02r93b7vsg9t0jb5": {
+                  "id": "68cc0cfa8210b5c0e8b751b7",
+                  "target": "68cc0d058210b5c0e8b751ba",
+                  "type": "",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc0cf88210b5c0e8b751b4"
+        },
+        "68cc0d058210b5c0e8b751b9": {
+          "type": "goToNode",
+          "data": {
+            "name": "",
+            "nodeID": "68cc09fc8210b5c0e8b750e8",
+            "diagramID": "68cc09e656c08e8529a762c1",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "68cc0d058210b5c0e8b751b9"
+        },
+        "68cc0d058210b5c0e8b751ba": {
+          "type": "actions",
+          "data": {
+            "name": "",
+            "steps": [
+              "68cc0d058210b5c0e8b751b9"
+            ]
+          },
+          "nodeID": "68cc0d058210b5c0e8b751ba",
+          "coords": [
+            0,
+            0
+          ]
+        }
+      },
+      "offsetX": 1387.2224698903394,
+      "offsetY": 541.5324950997502,
+      "modified": 1701833501,
+      "creatorID": 1077441,
+      "variables": [],
+      "menuItems": [
+        {
+          "type": "NODE",
+          "sourceID": "start00000000000000000000"
+        }
+      ],
+      "menuNodeIDs": [],
+      "intentStepIDs": [],
+      "_id": "68cac9b5ec4cdbd2280e0741",
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "versionID": "68cac9b5ec4cdbd2280e073e"
+    }
+  },
+  "flows": [],
+  "entities": [],
+  "entityVariants": [],
+  "intents": [
+    {
+      "id": "None",
+      "name": "None",
+      "createdByID": 1077441,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedd9f",
+      "name": "No",
+      "createdByID": 1077441,
+      "folderID": null,
+      "description": "Trigger this intent then the user responds negatively",
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd1",
+      "name": "Yes",
+      "createdByID": 1077441,
+      "folderID": null,
+      "description": "Trigger this intent when the user responds positively.",
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    }
+  ],
+  "utterances": [
+    {
+      "id": "6797c2110cfd6c00ccbedda0",
+      "text": [
+        {
+          "text": [
+            "I'm good"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda1",
+      "text": [
+        {
+          "text": [
+            "Nope"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda2",
+      "text": [
+        {
+          "text": [
+            "I think I'm good thanks"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda3",
+      "text": [
+        {
+          "text": [
+            "Definitely not"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda4",
+      "text": [
+        {
+          "text": [
+            "Nope"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda5",
+      "text": [
+        {
+          "text": [
+            "Under no circumstances"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda6",
+      "text": [
+        {
+          "text": [
+            "Not at all"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda7",
+      "text": [
+        {
+          "text": [
+            "Nope, not at all"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda8",
+      "text": [
+        {
+          "text": [
+            "No way"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbedda9",
+      "text": [
+        {
+          "text": [
+            "By no means"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddaa",
+      "text": [
+        {
+          "text": [
+            "Not in the slightest"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddab",
+      "text": [
+        {
+          "text": [
+            "No chance"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddac",
+      "text": [
+        {
+          "text": [
+            "Absolutely not"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddad",
+      "text": [
+        {
+          "text": [
+            "Not at all"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddae",
+      "text": [
+        {
+          "text": [
+            "Negative"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddaf",
+      "text": [
+        {
+          "text": [
+            "Sorry, no"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb0",
+      "text": [
+        {
+          "text": [
+            "Definitely not"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb1",
+      "text": [
+        {
+          "text": [
+            "That's wrong"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb2",
+      "text": [
+        {
+          "text": [
+            "Incorrect"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb3",
+      "text": [
+        {
+          "text": [
+            "Nope"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2110cfd6c00ccbeddb4",
+      "text": [
+        {
+          "text": [
+            "No"
+          ]
+        }
+      ],
+      "intentID": "6797c2110cfd6c00ccbedd9f",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd2",
+      "text": [
+        {
+          "text": [
+            "Definitely"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd3",
+      "text": [
+        {
+          "text": [
+            "Indeed"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd4",
+      "text": [
+        {
+          "text": [
+            "Of course"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd5",
+      "text": [
+        {
+          "text": [
+            "Certainly"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd6",
+      "text": [
+        {
+          "text": [
+            "Without question"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd7",
+      "text": [
+        {
+          "text": [
+            "Sure"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd8",
+      "text": [
+        {
+          "text": [
+            "Definitely"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddd9",
+      "text": [
+        {
+          "text": [
+            "You bet"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddda",
+      "text": [
+        {
+          "text": [
+            "Without a doubt"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddb",
+      "text": [
+        {
+          "text": [
+            "By all means"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddc",
+      "text": [
+        {
+          "text": [
+            "Agreed"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddd",
+      "text": [
+        {
+          "text": [
+            "Absolutely"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbeddde",
+      "text": [
+        {
+          "text": [
+            "That's correct"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedddf",
+      "text": [
+        {
+          "text": [
+            "Indeed"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedde0",
+      "text": [
+        {
+          "text": [
+            "Affirmative"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c2660cfd6c00ccbedde1",
+      "text": [
+        {
+          "text": [
+            "You are right"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c3060cfd6c00ccbede5c",
+      "text": [
+        {
+          "text": [
+            "Correct"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c3080cfd6c00ccbede5d",
+      "text": [
+        {
+          "text": [
+            "Yep"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "6797c3090cfd6c00ccbede5e",
+      "text": [
+        {
+          "text": [
+            "Yes"
+          ]
+        }
+      ],
+      "intentID": "6797c2660cfd6c00ccbeddd1",
+      "language": "en-us",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    }
+  ],
+  "requiredEntities": [],
+  "folders": [],
+  "responses": [
+    {
+      "id": "684eb4d02d4ddb7e9258a4bd",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": true,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cad5592e910ad0673736b4",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-17T15:35:54.000Z",
+      "updatedAt": "2025-09-17T15:35:59.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbb8182e910ad0673780aa",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T07:43:21.000Z",
+      "updatedAt": "2025-09-18T07:43:48.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbbe152e910ad067378377",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:08:54.000Z",
+      "updatedAt": "2025-09-18T08:09:19.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbbd9c2e910ad06737832d",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:06:53.000Z",
+      "updatedAt": "2025-09-18T08:06:55.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbbdca2e910ad067378349",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:07:38.000Z",
+      "updatedAt": "2025-09-18T08:07:40.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbbebc2e910ad0673783bf",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:11:41.000Z",
+      "updatedAt": "2025-09-18T08:11:55.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbc23a2e910ad06737848d",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:26:35.000Z",
+      "updatedAt": "2025-09-18T08:26:37.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbc8a02e910ad06737859f",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:53:53.000Z",
+      "updatedAt": "2025-09-18T08:53:56.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbc8a62e910ad0673785a9",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:53:59.000Z",
+      "updatedAt": "2025-09-18T08:54:04.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbc8b62e910ad0673785ba",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:54:14.000Z",
+      "updatedAt": "2025-09-18T08:54:17.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbc8be2e910ad0673785c5",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:54:22.000Z",
+      "updatedAt": "2025-09-18T08:54:29.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbc8c82e910ad0673785ce",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T08:54:32.000Z",
+      "updatedAt": "2025-09-18T08:54:33.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbd11b2e910ad067378809",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T09:30:04.000Z",
+      "updatedAt": "2025-09-18T09:30:06.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbd1222e910ad067378817",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T09:30:11.000Z",
+      "updatedAt": "2025-09-18T09:30:19.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbd1352e910ad06737882e",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T09:30:30.000Z",
+      "updatedAt": "2025-09-18T09:30:34.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbd1422e910ad06737883d",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T09:30:42.000Z",
+      "updatedAt": "2025-09-18T09:30:53.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbd1502e910ad067378845",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T09:30:56.000Z",
+      "updatedAt": "2025-09-18T09:30:57.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbd17b2e910ad067378861",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T09:31:40.000Z",
+      "updatedAt": "2025-09-18T09:31:51.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cc09fc56c08e8529a762c2",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T13:32:45.000Z",
+      "updatedAt": "2025-09-18T13:32:45.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cc09fc56c08e8529a762c5",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T13:32:45.000Z",
+      "updatedAt": "2025-09-18T13:32:45.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cc09fc56c08e8529a762c8",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T13:32:45.000Z",
+      "updatedAt": "2025-09-18T13:32:45.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cc09fc56c08e8529a762cb",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T13:32:45.000Z",
+      "updatedAt": "2025-09-18T13:32:45.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cc09fc56c08e8529a762ce",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T13:32:45.000Z",
+      "updatedAt": "2025-09-18T13:32:45.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cc09fc56c08e8529a762d1",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T13:32:45.000Z",
+      "updatedAt": "2025-09-18T13:32:45.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cc0ce8606fc6ce53802fff",
+      "name": "",
+      "createdByID": 1077441,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-09-18T13:45:13.000Z",
+      "updatedAt": "2025-09-18T13:45:21.000Z",
+      "updatedByID": 1077441
+    }
+  ],
+  "responseMessages": [
+    {
+      "id": "68cbbdca2e910ad06737834b",
+      "discriminatorID": "68cbbdca2e910ad06737834a",
+      "text": [
+        {
+          "text": [
+            "One of our travel specialists will be in touch with you soon, and you’ll also receive a confirmation email with the details of your inquiry! 📥"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T08:07:38.000Z"
+    },
+    {
+      "id": "68cbbebc2e910ad0673783c1",
+      "discriminatorID": "68cbbebc2e910ad0673783c0",
+      "text": [
+        {
+          "text": [
+            "Hello! 👋"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": 2000,
+      "createdAt": "2025-09-18T08:11:41.000Z"
+    },
+    {
+      "id": "68cbc8a02e910ad0673785a1",
+      "discriminatorID": "68cbc8a02e910ad0673785a0",
+      "text": [
+        {
+          "text": [
+            "Hello"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T08:53:53.000Z"
+    },
+    {
+      "id": "68cbc8a62e910ad0673785ab",
+      "discriminatorID": "68cbc8a62e910ad0673785aa",
+      "text": [
+        {
+          "text": [
+            "How are you?"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T08:53:59.000Z"
+    },
+    {
+      "id": "68cbc8b62e910ad0673785bc",
+      "discriminatorID": "68cbc8b62e910ad0673785bb",
+      "text": [
+        {
+          "text": [
+            "Awesome!"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T08:54:14.000Z"
+    },
+    {
+      "id": "68cbd11b2e910ad06737880b",
+      "discriminatorID": "68cbd11b2e910ad06737880a",
+      "text": [
+        {
+          "text": [
+            "Hi there"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T09:30:04.000Z"
+    },
+    {
+      "id": "68cbd1222e910ad067378819",
+      "discriminatorID": "68cbd1222e910ad067378818",
+      "text": [
+        {
+          "text": [
+            "How can I help you"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T09:30:11.000Z"
+    },
+    {
+      "id": "68cbd1352e910ad067378830",
+      "discriminatorID": "68cbd1352e910ad06737882f",
+      "text": [
+        {
+          "text": [
+            "Great"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T09:30:30.000Z"
+    },
+    {
+      "id": "68cbd1422e910ad06737883f",
+      "discriminatorID": "68cbd1422e910ad06737883e",
+      "text": [
+        {
+          "text": [
+            "Here is the vf_memory"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T09:30:42.000Z"
+    },
+    {
+      "id": "68cbd17b2e910ad067378863",
+      "discriminatorID": "68cbd17b2e910ad067378862",
+      "text": [
+        {
+          "text": [
+            "And here is the clean vf memory:"
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "",
+            {
+              "variableID": "68cbd10e2e910ad067378804"
+            },
+            " "
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T09:31:40.000Z"
+    },
+    {
+      "id": "68cc0ce8606fc6ce53803001",
+      "discriminatorID": "68cc0ce8606fc6ce53803000",
+      "text": [
+        {
+          "text": [
+            "Pick a demo:"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T13:45:13.000Z"
+    },
+    {
+      "id": "684eb4d02d4ddb7e9258a4bf",
+      "discriminatorID": "684eb4d02d4ddb7e9258a4be",
+      "text": [
+        {
+          "text": [
+            ""
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "68cad5592e910ad0673736b6",
+      "discriminatorID": "68cad5592e910ad0673736b5",
+      "text": [
+        {
+          "text": [
+            "Pick a version"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-17T15:35:54.000Z"
+    },
+    {
+      "id": "68cbb8182e910ad0673780ac",
+      "discriminatorID": "68cbb8182e910ad0673780ab",
+      "text": [
+        {
+          "text": [
+            "Take a look at some of our favorite destinations below, feel free to ask me anything that sparks your interest!"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T07:43:21.000Z"
+    },
+    {
+      "id": "68cbbd9c2e910ad06737832f",
+      "discriminatorID": "68cbbd9c2e910ad06737832e",
+      "text": [
+        {
+          "text": [
+            "Thank you for your response! We’ve received your request for a custom itinerary"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": 1500,
+      "createdAt": "2025-09-18T08:06:53.000Z"
+    },
+    {
+      "id": "68cbbe152e910ad067378379",
+      "discriminatorID": "68cbbe152e910ad067378378",
+      "text": [
+        {
+          "text": [
+            "Is there is anything else I can help you with? I am always here to help 😊"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": 1500,
+      "createdAt": "2025-09-18T08:08:54.000Z"
+    },
+    {
+      "id": "68cbc23a2e910ad06737848f",
+      "discriminatorID": "68cbc23a2e910ad06737848e",
+      "text": [
+        {
+          "text": [
+            "Perfect! Just drop a few details below so we can send your personalized itinerary to you! ✈️🌎"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": 1500,
+      "createdAt": "2025-09-18T08:26:35.000Z"
+    },
+    {
+      "id": "68cbc8be2e910ad0673785c7",
+      "discriminatorID": "68cbc8be2e910ad0673785c6",
+      "text": [
+        {
+          "text": [
+            "Here is our entire conversation memory:"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T08:54:22.000Z"
+    },
+    {
+      "id": "68cbc8c82e910ad0673785d0",
+      "discriminatorID": "68cbc8c82e910ad0673785cf",
+      "text": [
+        {
+          "text": [
+            "",
+            {
+              "variableID": "vf_memory"
+            },
+            " "
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T08:54:32.000Z"
+    },
+    {
+      "id": "68cbd1502e910ad067378847",
+      "discriminatorID": "68cbd1502e910ad067378846",
+      "text": [
+        {
+          "text": [
+            "",
+            {
+              "variableID": "vf_memory"
+            },
+            " "
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T09:30:56.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762c4",
+      "discriminatorID": "68cc09fc56c08e8529a762c3",
+      "text": [
+        {
+          "text": [
+            "Take a look at some of our favorite destinations below, feel free to ask me anything that sparks your interest!"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762c7",
+      "discriminatorID": "68cc09fc56c08e8529a762c6",
+      "text": [
+        {
+          "text": [
+            "Thank you for your response! We’ve received your request for a custom itinerary"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": 1500,
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762ca",
+      "discriminatorID": "68cc09fc56c08e8529a762c9",
+      "text": [
+        {
+          "text": [
+            "One of our travel specialists will be in touch with you soon, and you’ll also receive a confirmation email with the details of your inquiry! 📥"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762cd",
+      "discriminatorID": "68cc09fc56c08e8529a762cc",
+      "text": [
+        {
+          "text": [
+            "Is there is anything else I can help you with? I am always here to help 😊"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": 1500,
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762d0",
+      "discriminatorID": "68cc09fc56c08e8529a762cf",
+      "text": [
+        {
+          "text": [
+            "Hello! 👋"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": 2000,
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762d3",
+      "discriminatorID": "68cc09fc56c08e8529a762d2",
+      "text": [
+        {
+          "text": [
+            "Perfect! Just drop a few details below so we can send your personalized itinerary to you! ✈️🌎"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": 1500,
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    }
+  ],
+  "responseDiscriminators": [
+    {
+      "id": "68cbb8182e910ad0673780ab",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbb8182e910ad0673780aa",
+      "variantOrder": [
+        "68cbb8182e910ad0673780ac"
+      ],
+      "createdAt": "2025-09-18T07:43:21.000Z"
+    },
+    {
+      "id": "68cbbd9c2e910ad06737832e",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbbd9c2e910ad06737832d",
+      "variantOrder": [
+        "68cbbd9c2e910ad06737832f"
+      ],
+      "createdAt": "2025-09-18T08:06:53.000Z"
+    },
+    {
+      "id": "68cbbdca2e910ad06737834a",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbbdca2e910ad067378349",
+      "variantOrder": [
+        "68cbbdca2e910ad06737834b"
+      ],
+      "createdAt": "2025-09-18T08:07:38.000Z"
+    },
+    {
+      "id": "68cbbe152e910ad067378378",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbbe152e910ad067378377",
+      "variantOrder": [
+        "68cbbe152e910ad067378379"
+      ],
+      "createdAt": "2025-09-18T08:08:54.000Z"
+    },
+    {
+      "id": "68cbbebc2e910ad0673783c0",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbbebc2e910ad0673783bf",
+      "variantOrder": [
+        "68cbbebc2e910ad0673783c1"
+      ],
+      "createdAt": "2025-09-18T08:11:41.000Z"
+    },
+    {
+      "id": "68cbc23a2e910ad06737848e",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbc23a2e910ad06737848d",
+      "variantOrder": [
+        "68cbc23a2e910ad06737848f"
+      ],
+      "createdAt": "2025-09-18T08:26:35.000Z"
+    },
+    {
+      "id": "68cbc8be2e910ad0673785c6",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbc8be2e910ad0673785c5",
+      "variantOrder": [
+        "68cbc8be2e910ad0673785c7"
+      ],
+      "createdAt": "2025-09-18T08:54:22.000Z"
+    },
+    {
+      "id": "68cbc8a02e910ad0673785a0",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbc8a02e910ad06737859f",
+      "variantOrder": [
+        "68cbc8a02e910ad0673785a1"
+      ],
+      "createdAt": "2025-09-18T08:53:53.000Z"
+    },
+    {
+      "id": "68cbc8a62e910ad0673785aa",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbc8a62e910ad0673785a9",
+      "variantOrder": [
+        "68cbc8a62e910ad0673785ab"
+      ],
+      "createdAt": "2025-09-18T08:53:59.000Z"
+    },
+    {
+      "id": "68cbc8b62e910ad0673785bb",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbc8b62e910ad0673785ba",
+      "variantOrder": [
+        "68cbc8b62e910ad0673785bc"
+      ],
+      "createdAt": "2025-09-18T08:54:14.000Z"
+    },
+    {
+      "id": "68cbc8c82e910ad0673785cf",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbc8c82e910ad0673785ce",
+      "variantOrder": [
+        "68cbc8c82e910ad0673785d0"
+      ],
+      "createdAt": "2025-09-18T08:54:32.000Z"
+    },
+    {
+      "id": "68cbd11b2e910ad06737880a",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbd11b2e910ad067378809",
+      "variantOrder": [
+        "68cbd11b2e910ad06737880b"
+      ],
+      "createdAt": "2025-09-18T09:30:04.000Z"
+    },
+    {
+      "id": "68cbd1222e910ad067378818",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbd1222e910ad067378817",
+      "variantOrder": [
+        "68cbd1222e910ad067378819"
+      ],
+      "createdAt": "2025-09-18T09:30:11.000Z"
+    },
+    {
+      "id": "68cbd1422e910ad06737883e",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbd1422e910ad06737883d",
+      "variantOrder": [
+        "68cbd1422e910ad06737883f"
+      ],
+      "createdAt": "2025-09-18T09:30:42.000Z"
+    },
+    {
+      "id": "68cbd1352e910ad06737882f",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbd1352e910ad06737882e",
+      "variantOrder": [
+        "68cbd1352e910ad067378830"
+      ],
+      "createdAt": "2025-09-18T09:30:30.000Z"
+    },
+    {
+      "id": "68cbd1502e910ad067378846",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbd1502e910ad067378845",
+      "variantOrder": [
+        "68cbd1502e910ad067378847"
+      ],
+      "createdAt": "2025-09-18T09:30:56.000Z"
+    },
+    {
+      "id": "68cbd17b2e910ad067378862",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cbd17b2e910ad067378861",
+      "variantOrder": [
+        "68cbd17b2e910ad067378863"
+      ],
+      "createdAt": "2025-09-18T09:31:40.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762c3",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cc09fc56c08e8529a762c2",
+      "variantOrder": [
+        "68cc09fc56c08e8529a762c4"
+      ],
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762c6",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cc09fc56c08e8529a762c5",
+      "variantOrder": [
+        "68cc09fc56c08e8529a762c7"
+      ],
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762c9",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cc09fc56c08e8529a762c8",
+      "variantOrder": [
+        "68cc09fc56c08e8529a762ca"
+      ],
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762cc",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cc09fc56c08e8529a762cb",
+      "variantOrder": [
+        "68cc09fc56c08e8529a762cd"
+      ],
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762cf",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cc09fc56c08e8529a762ce",
+      "variantOrder": [
+        "68cc09fc56c08e8529a762d0"
+      ],
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc09fc56c08e8529a762d2",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cc09fc56c08e8529a762d1",
+      "variantOrder": [
+        "68cc09fc56c08e8529a762d3"
+      ],
+      "createdAt": "2025-09-18T13:32:45.000Z"
+    },
+    {
+      "id": "68cc0ce8606fc6ce53803000",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cc0ce8606fc6ce53802fff",
+      "variantOrder": [
+        "68cc0ce8606fc6ce53803001"
+      ],
+      "createdAt": "2025-09-18T13:45:13.000Z"
+    },
+    {
+      "id": "684eb4d02d4ddb7e9258a4be",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "684eb4d02d4ddb7e9258a4bd",
+      "variantOrder": [
+        "684eb4d02d4ddb7e9258a4bf"
+      ],
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "68cad5592e910ad0673736b5",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "68cad5592e910ad0673736b4",
+      "variantOrder": [
+        "68cad5592e910ad0673736b6"
+      ],
+      "createdAt": "2025-09-17T15:35:54.000Z"
+    }
+  ],
+  "variables": [
+    {
+      "id": "sessions",
+      "name": "sessions",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The number of times a particular user has opened the app.",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "user_id",
+      "name": "user_id",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's unique ID.",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "timestamp",
+      "name": "timestamp",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "UNIX timestamp (number of seconds since January 1st, 1970 at UTC).",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "platform",
+      "name": "platform",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "locale",
+      "name": "locale",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "intent_confidence",
+      "name": "intent_confidence",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The confidence interval (measured as a value from 0 to 100) for the most recently matched intent.",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "last_response",
+      "name": "last_response",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The agent's last response (text/speak) in a string.",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "last_event",
+      "name": "last_event",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "any",
+      "description": "The object containing the last event that the user client has triggered.",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "last_utterance",
+      "name": "last_utterance",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's last utterance in a text string.",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "vf_memory",
+      "name": "vf_memory",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+      "defaultValue": "",
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-18T08:42:37.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "684eb1182d4ddb7e9258a224",
+      "name": "summary",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "short summary of the converastion and why user wants to leave his contacts",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "684eb0ed2d4ddb7e9258a210",
+      "name": "full_name",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Name and Surname",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "684eb0f32d4ddb7e9258a212",
+      "name": "email",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "email of the user",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "684eb45b2d4ddb7e9258a433",
+      "name": "kb_chunks",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "684ebaa02d4ddb7e9258a76f",
+      "name": "user_action",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "",
+      "defaultValue": "`none`",
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "684ebc202d4ddb7e9258a806",
+      "name": "destination",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Morocco",
+      "defaultValue": null,
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbb76b2e910ad06737802a",
+      "name": "Conversation_Summary",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "A summary of the conversation between the virtual travel agent and the customer.",
+      "defaultValue": null,
+      "createdAt": "2025-09-18T07:40:28.000Z",
+      "updatedAt": "2025-09-18T07:40:28.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbd10e2e910ad067378804",
+      "name": "clean_vf_memory",
+      "createdByID": 1077441,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "JSON cleaned {vf_memory} variable",
+      "defaultValue": null,
+      "createdAt": "2025-09-18T09:29:50.000Z",
+      "updatedAt": "2025-09-18T09:29:50.000Z",
+      "updatedByID": 1077441
+    }
+  ],
+  "workflows": [
+    {
+      "id": "68cc099e606fc6ce53802d88",
+      "name": "1. (17 SEP 2025, 15:30 CEST) - Travel Agent",
+      "createdByID": 1077441,
+      "folderID": null,
+      "status": null,
+      "isStart": false,
+      "diagramID": "68cc099e56c08e8529a762c0",
+      "assigneeID": 1077441,
+      "description": "",
+      "createdAt": "2025-09-18T13:31:11.000Z",
+      "updatedAt": "2025-09-18T13:31:16.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "66df755be937eb000784abb2",
+      "name": "Start workflow",
+      "createdByID": 1077441,
+      "folderID": null,
+      "status": null,
+      "isStart": true,
+      "diagramID": "64dbb6696a8fab0013dba194",
+      "assigneeID": null,
+      "description": "",
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-18T13:45:45.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cc09e6606fc6ce53802da5",
+      "name": "2. (17 SEP 2025, 16:30 CEST) - Discover Destinations",
+      "createdByID": 1077441,
+      "folderID": null,
+      "status": null,
+      "isStart": false,
+      "diagramID": "68cc09e656c08e8529a762c1",
+      "assigneeID": 1077441,
+      "description": "",
+      "createdAt": "2025-09-18T13:32:23.000Z",
+      "updatedAt": "2025-09-18T13:51:23.000Z",
+      "updatedByID": 1077441
+    }
+  ],
+  "attachments": [],
+  "cardButtons": [],
+  "prompts": [
+    {
+      "id": "68cbb6986bade29c2d24187a",
+      "name": "Conversation Summary Generator",
+      "createdByID": 1077441,
+      "folderID": null,
+      "description": "",
+      "settings": {
+        "useStructuredOutput": false
+      },
+      "messageOrder": [
+        "68cbb6986bade29c2d24187b",
+        "68cbb6986bade29c2d24187c"
+      ],
+      "createdAt": "2025-09-18T07:36:56.000Z",
+      "updatedAt": "2025-09-18T07:39:44.000Z",
+      "updatedByID": 1077441
+    }
+  ],
+  "promptMessages": [
+    {
+      "id": "68cbb6986bade29c2d24187b",
+      "promptID": "68cbb6986bade29c2d24187a",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "system",
+        "content": [
+          {
+            "text": [
+              "You are a helpful assistant. Your job is to summarize a conversation between a virtual travel agent and a customer. You should summarize key parts of the conversation in bullet points. You don't need to include the customer's name or email. Your summary is for the TRAVEL AGENT, not the customer, so do not include clarifying questions as part of the conversation."
+            ]
+          },
+          {
+            "text": [
+              {
+                "text": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "text": [
+              "Only respond with the bullet pointed summary."
+            ]
+          },
+          {
+            "text": [
+              {
+                "text": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "text": [
+              "Conversation:"
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-09-18T07:36:56.000Z"
+    },
+    {
+      "id": "68cbb6986bade29c2d24187c",
+      "promptID": "68cbb6986bade29c2d24187a",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              "",
+              {
+                "variableID": "vf_memory"
+              },
+              " "
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-09-18T07:36:56.000Z"
+    }
+  ],
+  "events": [],
+  "agents": [
+    {
+      "id": "67db2b56cbe88befffef4623",
+      "name": "Customer support specialist",
+      "createdByID": 1077441,
+      "folderID": null,
+      "settings": {
+        "model": "gpt-4.1-mini-2025-04-14",
+        "maxTokens": 2172,
+        "temperature": 0.3,
+        "reasoningEffort": null
+      },
+      "description": "An agent template for resolving issues and ensuring customer satisfaction with technical skill and empathy.",
+      "instructions": [
+        {
+          "text": [
+            "## INSTRUCTIONS:\n\nYou are an AI assistant inside the website for **Discover Destinations**, a premier U.S.–based destination management company headquartered in Atlanta, GA. The company designs **custom travel experiences and fixed itineraries** for students, leisure travelers, corporations, honeymooners, and sports fans worldwide. Your name is **\"Discover Destination Smart Travel Guide.\"**\n\n***\n\n## TASK\n\n1. **Answer user questions** about Discover Destinations’ services, itineraries, specialties (educational tours, sports travel, honeymoons, corporate packages), destinations, and customer service approach using the knowledge base.\n\n2. **Inspire & inform** by sharing short travel ideas, tips, or highlights of Discover Destinations’ unique offerings (e.g., educational experiences at NASA facilities, major sporting events, romantic getaways).\n\n3. **Guide the conversation** toward the option of a **custom travel itinerary** by naturally suggesting it after answering questions or when the traveler shows excitement. Always phrase it as a helpful offer (e.g., “Would you like me to put together a custom itinerary for you?”).\n\n4. When a user expresses interest in travel options, destinations or tours, **always first respond** with one sentence indicating that you will show them various destinations and encourage them to ask questions for more information before proceeding to the exit condition \"show_travel_options\". \n\n_Remember:_\n\n- Do **not** fabricate information or URLs.\n\n- Do **not** introduce knowledge unrelated to Discover Destinations.\n\n- If information is unavailable, state it clearly.\n\n- Never sound pushy or sales-driven — focus on being helpful and conversational.\n\n***\n\n## TONE AND PERSONALITY\n\n- Greet visitors briefly, introduce yourself, and ask how you can assist today.\n\n- Friendly, enthusiastic, and professional — reflecting warmth and personalized service.\n\n- Keep answers concise (1–3 sentences unless more detail is requested).\n\n- Celebrate the traveler’s excitement and emphasize creating lasting memories (e.g., “That sounds like an unforgettable sports trip!”).\n\n- Naturally lead toward the idea of a **custom itinerary** as the best way to turn their ideas into reality.\n\n***\n\n## TOOLS\n\n### search_knowledge_base\n\nWhen to call:\n\n- Whenever the visitor requests or implies they need factual details.\n\n- For follow-up questions on the same topic — always search again; do not rely only on memory.\n\n- Even if you think you know the answer; search first to avoid outdated or invented information.\n\nIf no useful results:\n\n- Briefly state that you don’t have that information.\n\n- Never fabricate data, URLs, or claims.\n\n## Available Variables (for reference only):"
+          ]
+        }
+      ],
+      "pathToolOrder": [
+        "68cacb622e910ad067373285",
+        "684eb8732d4ddb7e9258a6c5"
+      ],
+      "webSearchTool": null,
+      "knowledgeBaseTool": {
+        "enabled": false,
+        "description": "Triggered the knowledge base when you don't know the answer to a question."
+      },
+      "buttonTool": null,
+      "cardTool": null,
+      "carouselTool": {
+        "enabled": false,
+        "description": "Displays a carousel of up to 10 cards, each containing a title, description, image, and optional action buttons."
+      },
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-18T13:34:45.000Z",
+      "updatedByID": 1077441
+    }
+  ],
+  "agentAPITools": [],
+  "agentPathTools": [
+    {
+      "id": "684eb8732d4ddb7e9258a6c5",
+      "name": "show_travel_options",
+      "agentID": "67db2b56cbe88befffef4623",
+      "description": "User wants to see what kind of options are available for different tours and travels.\n\n# **IMPORTANT:**\n\nBefore using this \"show_travel_options\" tool, **always** respond using one sentence that you're going to show destinations  and tell user to ask questions to learn more.",
+      "variableOrder": [],
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    },
+    {
+      "id": "68cacb622e910ad067373285",
+      "name": "lead_capture",
+      "agentID": "67db2b56cbe88befffef4623",
+      "description": "# **Exit Condition Prompt — Lead Capture**\n\nUser agrees that they would like a **custom travel plan or itinerary**.\n\nBefore using the tools, respond in **one friendly sentence** to confirm their interest and explain you’ll connect them to receive a tailored itinerary.",
+      "variableOrder": [],
+      "createdAt": "2025-09-17T14:53:22.000Z"
+    }
+  ],
+  "agentFunctionTools": [
+    {
+      "id": "684eb4252d4ddb7e9258a40d",
+      "agentID": "67db2b56cbe88befffef4623",
+      "functionID": "684eb308674753d4156007eb",
+      "description": null,
+      "inputVariables": {
+        "684eb308674753d4156007f0": {
+          "description": "",
+          "defaultValue": [
+            {
+              "text": [
+                "",
+                {
+                  "secretID": "684eb4012d4ddb7e9258a3f1"
+                },
+                ""
+              ]
+            }
+          ],
+          "functionInputVariableID": "684eb308674753d4156007f0"
+        }
+      },
+      "captureResponse": {
+        "684eb308674753d4156007ef": {
+          "variableOrEntityID": "684eb45b2d4ddb7e9258a433",
+          "functionOutputVariableID": "684eb308674753d4156007ef"
+        }
+      },
+      "captureInputVariables": null,
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    }
+  ],
+  "agentIntegrationTools": [],
+  "agentPathToolVariables": [],
+  "agentMcpIntegrationTools": [],
+  "apiTools": [
+    {
+      "id": "684ec4002d4ddb7e9258ac6d",
+      "name": "store_leads",
+      "createdByID": 1077441,
+      "folderID": null,
+      "url": [
+        {
+          "text": [
+            "https://hook.eu2.make.com/4q0njit8yu1hyfs2nai693md3b2s4blp"
+          ]
+        }
+      ],
+      "body": {
+        "type": "raw-input",
+        "content": [
+          "{\n  \"full_name\": \"",
+          {
+            "variableID": "684ec53b2d4ddb7e9258acbc"
+          },
+          "\",\n  \"email\": \"",
+          {
+            "variableID": "684ec5402d4ddb7e9258acbf"
+          },
+          "\",\n  \"summary\": \"",
+          {
+            "variableID": "684ec5422d4ddb7e9258acc0"
+          },
+          "\"\n}"
+        ],
+        "contentType": "json"
+      },
+      "image": null,
+      "headers": [
+        {
+          "id": "cmbxobxvd04be3b7peyzc0fga",
+          "key": "Content-Type",
+          "value": [
+            {
+              "text": [
+                "application/json"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cmbxobrv804ba3b7p237l2m4p",
+          "key": "Accept",
+          "value": [
+            {
+              "text": [
+                "application/json"
+              ]
+            }
+          ]
+        }
+      ],
+      "httpMethod": "post",
+      "description": "",
+      "queryParameters": [],
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-17T14:46:13.000Z",
+      "updatedByID": 1077441
+    },
+    {
+      "id": "68cbb2132e910ad067377eed",
+      "name": "Untitled API",
+      "createdByID": 1077441,
+      "folderID": null,
+      "url": null,
+      "body": null,
+      "image": null,
+      "headers": [],
+      "httpMethod": "get",
+      "description": null,
+      "queryParameters": [],
+      "createdAt": "2025-09-18T07:17:39.000Z",
+      "updatedAt": "2025-09-18T07:17:39.000Z",
+      "updatedByID": 1077441
+    }
+  ],
+  "apiToolInputVariables": [
+    {
+      "id": "684ec53b2d4ddb7e9258acbc",
+      "name": "full_name",
+      "apiToolID": "684ec4002d4ddb7e9258ac6d",
+      "description": "user full name",
+      "createdAt": "2025-09-17T14:46:13.037Z"
+    },
+    {
+      "id": "684ec5402d4ddb7e9258acbf",
+      "name": "email",
+      "apiToolID": "684ec4002d4ddb7e9258ac6d",
+      "description": "user email",
+      "createdAt": "2025-09-17T14:46:13.038Z"
+    },
+    {
+      "id": "684ec5422d4ddb7e9258acc0",
+      "name": "summary",
+      "apiToolID": "684ec4002d4ddb7e9258ac6d",
+      "description": "short summary of the conversation",
+      "createdAt": "2025-09-17T14:46:13.039Z"
+    }
+  ],
+  "integrationTools": [],
+  "functions": [
+    {
+      "id": "684eb308674753d4156007eb",
+      "name": "search_knowledge_base",
+      "createdByID": 1077441,
+      "folderID": null,
+      "code": "export default async function main(args) {\n  // Extract input variables from args\n  const { user_question, vf_token } = args.inputVars;\n\n  // Validate that the required input variable is provided\n  if (!user_question || !vf_token) {\n    return {\n      next: { path: 'error' },\n      trace: [{ type: \"debug\", payload: { message: \"Missing required input variables\" } }]\n    };\n  }\n\n  try {\n    const url = \"https://general-runtime.voiceflow.com/knowledge-base/query\";\n    const requestBody = {\n          \"question\": user_question,\n          \"chunkLimit\": 10,\n          \"synthesis\": false\n       };\n    \n    const response = await fetch(url, {\n        method: \"POST\",\n        headers: {\n          \"Content-Type\": \"application/json\",\n          Accept: \"application/json\",\n          Authorization: vf_token,\n        },\n        body: JSON.stringify(requestBody),\n      });\n    \n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n\n    const body = response.json;\n    const answer = []\n    body.chunks.forEach((chunk, index) => {\n      const url = chunk.source.url;\n\n      if (url){\n         answer.push(`<chunk_${index + 1}_context>${chunk.content}</chunk_${index + 1}_context>\\n<chunk_${index + 1}_url>${url}</chunk_${index + 1}_url>`);\n      }\n      else{\n        answer.push(`<chunk_${index + 1}_context>${chunk.content}</chunk_${index + 1}_context>`);\n      }\n    });\n\n    const chunks = answer.join('\\n');\n    \n    return {\n      outputVars: { chunks },\n      next: { path: 'success' },\n    };\n  } catch (error) {\n    return {\n      next: { path: 'error' },\n      trace: [\n        { type: \"debug\", payload: { message: \"Error: \" + error.message } },\n      ]\n    };\n  }\n}",
+      "image": "https://cm4-production-assets.s3.amazonaws.com/1744637727599-30659.png",
+      "description": "Use this function for all factual questions or clarifications about Discover Destinations'—its process, policies, fees, destinations, advisor bios, sample itineraries, blog posts, or any other information published on the site.",
+      "pathOrder": [
+        "684eb308674753d4156007ec",
+        "684eb308674753d4156007ed"
+      ],
+      "createdAt": "2025-09-17T14:46:13.000Z",
+      "updatedAt": "2025-09-18T09:26:44.000Z",
+      "updatedByID": 1077441
+    }
+  ],
+  "functionPaths": [
+    {
+      "id": "684eb308674753d4156007ec",
+      "name": "success",
+      "label": "Success",
+      "functionID": "684eb308674753d4156007eb",
+      "createdAt": "2025-09-17T14:46:13.037Z"
+    },
+    {
+      "id": "684eb308674753d4156007ed",
+      "name": "error",
+      "label": "Error",
+      "functionID": "684eb308674753d4156007eb",
+      "createdAt": "2025-09-17T14:46:13.038Z"
+    }
+  ],
+  "functionVariables": [
+    {
+      "id": "684eb308674753d4156007ee",
+      "name": "user_question",
+      "type": "input",
+      "functionID": "684eb308674753d4156007eb",
+      "description": "User question. Make sure to use correct grammar and include relevant things if it's a follow-up question.",
+      "createdAt": "2025-09-17T14:46:13.037Z"
+    },
+    {
+      "id": "684eb308674753d4156007ef",
+      "name": "chunks",
+      "type": "output",
+      "functionID": "684eb308674753d4156007eb",
+      "description": "",
+      "createdAt": "2025-09-17T14:46:13.038Z"
+    },
+    {
+      "id": "684eb308674753d4156007f0",
+      "name": "vf_token",
+      "type": "input",
+      "functionID": "684eb308674753d4156007eb",
+      "description": "api token",
+      "createdAt": "2025-09-17T14:46:13.039Z"
+    }
+  ],
+  "mcpServers": [],
+  "mcpServerTools": [],
+  "mcpIntegrationTools": [],
+  "project": {
+    "type": "chat",
+    "name": "AI Travel Agent",
+    "image": "https://cm4-production-assets.s3.amazonaws.com/1729190521409-square-onyx-1024.jpg",
+    "teamID": "LVkm9x7Kk2",
+    "members": [],
+    "privacy": "private",
+    "platform": "webchat",
+    "_version": 1.2,
+    "linkType": "STRAIGHT",
+    "creatorID": 1077441,
+    "updatedBy": 1077441,
+    "apiPrivacy": "public",
+    "platformData": {
+      "invocationName": "template project general"
+    },
+    "customThemes": [],
+    "aiAssistSettings": {
+      "aiPlayground": true
+    },
+    "_id": "68cac9b5ec4cdbd2280e073d",
+    "updatedAt": "2025-09-18T13:39:01.070Z",
+    "devVersion": "68cac9b5ec4cdbd2280e073e",
+    "liveVersion": "68cac9b5ec4cdbd2280e073f"
+  },
+  "_version": "1.2",
+  "secrets": [
+    {
+      "assistantID": "68cac9b5ec4cdbd2280e073d",
+      "id": "684eb4012d4ddb7e9258a3f1",
+      "updatedByID": 1077441,
+      "name": "vf_api_key",
+      "visibility": "masked",
+      "updatedAt": "2025-09-18T13:53:52.000Z",
+      "createdAt": "2025-09-17T14:46:13.000Z"
+    }
+  ],
+  "variableStates": [],
+  "transcriptEvaluations": []
+}
