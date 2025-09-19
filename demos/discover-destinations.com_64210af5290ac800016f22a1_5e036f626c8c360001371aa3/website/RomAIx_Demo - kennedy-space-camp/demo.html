@@ -658,59 +658,53 @@ var et_pb_sticky_elements = [];
     <div id="flat-chat"></div>
     <div id="voiceflow-chat-frame"></div>
 	
-	<!-- Load Extensions Script First (Non-Module) -->
-	<script src="./extensions.js"></script>
-	
-	<!-- Voiceflow Chat Widget Script -->
-	<script>
-	  console.log("Script loaded. Initializing Voiceflow chat widget...");
+	<!-- Voiceflow Chat Widget and Extensions Script -->
+<script type="module">
+  console.log("Script loaded. Initializing Voiceflow chat widget...");
 
-	  (function (d, t) {
-	    const v = d.createElement(t);
-	    const s = d.getElementsByTagName(t)[0];
+  // Import your extension as an ES module (same folder as this HTML file)
+  import { DiscoverDestinationsLeadForm1 } from './extensions.js';
 
-	    v.onload = async function () {
-	      console.log("Voiceflow widget script loaded. Initializing chat...");
+  (function (d, t) {
+    const v = d.createElement(t);
+    const s = d.getElementsByTagName(t)[0];
 
-	      // Wait a moment to ensure extensions are loaded
-	      await new Promise(resolve => setTimeout(resolve, 100));
+    v.onload = async function () {
+      console.log("Voiceflow widget script loaded. Initializing chat...");
 
-	      const config = {
-	        verify: { projectID: '68cac9b5ec4cdbd2280e073d' },
-	        url: 'https://general-runtime.voiceflow.com',
-	        versionID: 'production',
-	        user: { name: 'Demo User' },
-	        render: { mode: 'overlay' },
-	        autostart: false,
-	        allowDangerousHTML: true,
-	        assistant: {
-	          // Use extensions from global scope
-	          extensions: [
-	            window.DiscoverDestinationsLeadForm1,
-	            window.DiscoverDestinationsLeadForm2
-	          ].filter(Boolean), // Filter out any undefined extensions
-	        },
-	      };
+      const config = {
+        verify: { projectID: '68cac9b5ec4cdbd2280e073d' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        user: { name: 'Demo User' },
+        render: { mode: 'overlay' },
+        autostart: false,
+        allowDangerousHTML: true,
+        assistant: {
+          // pass the imported extension here
+          extensions: [DiscoverDestinationsLeadForm1],
+        },
+      };
 
-	      try {
-	        await window.voiceflow.chat.load(config);
-	        console.log("Voiceflow chat initialized successfully.");
+      try {
+        await window.voiceflow.chat.load(config);
+        console.log("Voiceflow chat initialized successfully.");
 
-	        // proactive messages
-	        window.voiceflow.chat.proactive.clear();
-	        setTimeout(() => window.voiceflow.chat.proactive.push({ type: 'text', payload: { message: 'Hi there!' } }), 1000);
-	        setTimeout(() => window.voiceflow.chat.proactive.push({ type: 'text', payload: { message: 'Looking for the perfect tour?' } }), 2000);
-	        setTimeout(() => window.voiceflow.chat.open(), 3000);
-	      } catch (error) {
-	        console.error("Error initializing Voiceflow chat:", error);
-	      }
-	    };
+        // proactive messages
+        window.voiceflow.chat.proactive.clear();
+        setTimeout(() => window.voiceflow.chat.proactive.push({ type: 'text', payload: { message: 'Hi there!' } }), 1000);
+        setTimeout(() => window.voiceflow.chat.proactive.push({ type: 'text', payload: { message: 'Looking for the perfect tour?' } }), 2000);
+        setTimeout(() => window.voiceflow.chat.open(), 3000);
+      } catch (error) {
+        console.error("Error initializing Voiceflow chat:", error);
+      }
+    };
 
-	    v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
-	    v.type = 'text/javascript';
-	    s.parentNode.insertBefore(v, s);
-	  })(document, 'script');
-	</script>
+    v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+    v.type = 'text/javascript';
+    s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
 
 
 </body>

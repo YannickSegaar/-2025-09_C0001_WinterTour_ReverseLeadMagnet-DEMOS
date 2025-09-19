@@ -1,7 +1,6 @@
 // YRS: DiscoverDestinationsLeadForm - VERSION 1(18 SEP 2025, 11:01 CEST)
-// Updated for mobile compatibility - using global scope instead of ES6 modules
 
-window.DiscoverDestinationsLeadForm1 = {
+export const DiscoverDestinationsLeadForm1 = {
   name: 'DiscoverDestinationsLeadForm1',
   type: 'response',
   match: ({ trace }) =>
@@ -671,9 +670,8 @@ window.DiscoverDestinationsLeadForm1 = {
 };
 
 // YRS: DiscoverDestinationsLeadForm - VERSION 2 (MOBILE RESPONSIVENESS?)(19 SEP 2025, 14:20 CEST)
-// Updated for mobile compatibility - using global scope instead of ES6 modules
 
-window.DiscoverDestinationsLeadForm2 = {
+export const DiscoverDestinationsLeadForm2 = {
   name: 'DiscoverDestinationsLeadForm2',
   type: 'response',
   match: ({ trace }) =>
