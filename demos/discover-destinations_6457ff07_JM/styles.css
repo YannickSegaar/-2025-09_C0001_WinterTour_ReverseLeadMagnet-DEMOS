@@ -1,0 +1,69 @@
+/* Custom styles for Discover Destinations demo */
+
+/* Voiceflow widget positioning */
+#voiceflow-chat-frame,
+#voiceflow-webchat,
+.vf-chat,
+.vf-widget-overlay,
+.vfrc-widget,
+.vfrc-launcher,
+.vfrc-launcher__container,
+.vfrc-overlay,
+body > iframe[title="Voiceflow Chat"] {
+  position: fixed !important;
+  z-index: 2147483647 !important; /* max safe */
+}
+
+/* Ensure main header doesn't overlap widget */
+#main-header,
+header.et-l--header {
+  z-index: 999 !important;
+}
+
+/* Demo-specific customizations */
+.demo-banner {
+  background: linear-gradient(135deg, #2E86AB 0%, #4A90A4 100%);
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  position: relative;
+  z-index: 998;
+}
+
+.demo-banner::before {
+  content: "🤖 ";
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+/* Highlight areas where chatbot integration is available */
+.chatbot-integration-area {
+  position: relative;
+}
+
+.chatbot-integration-area::after {
+  content: "💬 Try our AI assistant!";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #2E86AB;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  opacity: 0.8;
+  z-index: 10;
+}
+
+/* Custom animations for demo presentation */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.demo-highlight {
+  animation: pulse 2s infinite;
+}

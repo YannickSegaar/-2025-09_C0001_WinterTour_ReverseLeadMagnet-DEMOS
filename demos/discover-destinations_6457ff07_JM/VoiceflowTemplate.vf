@@ -1,0 +1,39 @@
+# Voiceflow Template for Discover Destinations Demo
+
+This file would contain the exported Voiceflow agent configuration in .vf format.
+
+## Template Information
+- **Template Name**: Discover Destinations Travel Assistant
+- **Version**: 1.0
+- **Created**: September 18, 2025
+- **Use Case**: Travel consultation and lead generation
+
+## Features Included
+- Welcome message customized for travel industry
+- Lead capture form integration
+- Destination recommendation flow
+- Budget and preference collection
+- Booking inquiry handling
+- Contact information collection
+
+## Integration Notes
+- Uses custom extension: DiscoverDestinationsLeadForm1
+- Branded with company colors and logo
+- Connected to N8N webhook for lead processing
+- Optimized for mobile and desktop display
+
+## Customization for Discover Destinations
+- Ocean blue color scheme (#2E86AB, #4A90A4)
+- Travel-specific conversation flows
+- Integration with existing website styling
+- Lead form matches company branding
+
+## Installation Instructions
+1. Import this .vf file into Voiceflow
+2. Update the project ID in the website integration
+3. Configure webhook URL in extensions.js
+4. Test chatbot functionality on demo website
+5. Deploy to production when approved
+
+---
+**Note**: This is a placeholder file. The actual .vf export from Voiceflow would replace this content when the chatbot template is finalized.
